@@ -35,8 +35,23 @@ padding: 0;
 }
 
 h1{
-    font-size: 4.2vw;
+    font-size: 4.4vw;
     font-weight: 600;
+}
+
+h2{
+    font-size: 3.4vw;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 2.4vw;
+    font-weight: 500;
+}
+
+p{
+    font-size: 1.6vw;
+    font-weight: 300;
 }
 
 /* section styles  */
@@ -58,7 +73,7 @@ nav{
 .nav-right{
     display: flex;
     font-size: 1.2vw;
-    gap: 1vw;
+    gap: 1.2vw;
     align-items: center;
 }
 
@@ -89,3 +104,40 @@ nav{
     align-items: center;
     padding: 0 6vw;
 }
+
+.services-section{
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    padding: 0 3vw;
+    gap: 6vw;
+}
+
+.accordion-container{
+    margin-top: 4vw;
+}
+
+.accordion-item{
+    border-top: solid 0.3vw;
+    border-bottom: solid 0.3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -0.3vw 0;
+}
+
+.accordion-content{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+.expand-icon{
+    width: 3.2vw;
+}
+
+.expand-icon:hover{
+    cursor: pointer;
+}
+
