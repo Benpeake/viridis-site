@@ -93,6 +93,9 @@ nav{
     width: 100%;
     height: auto; 
     display: block; 
+    opacity: 0.9;
+    object-fit: cover;
+    clip-path: inset(2px 2px 2px 2px); 
 }
 
 .la-right{
@@ -111,7 +114,7 @@ nav{
 }
 
 .accordion-container{
-    margin-top: 4vw;
+    margin: 4vw 0 ;
 }
 
 .accordion-item{
@@ -126,12 +129,12 @@ nav{
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.8s ease-in-out;
+    transition: max-height 0.4s ease-out;
 }
 
 .active {
     max-height: 100vh; 
-    transition: max-height 0.8s ease-in-out;
+    transition: max-height 0.8s ease-in;
 }
 
 .accordion-content p{
@@ -145,5 +148,23 @@ nav{
 
 .expand-icon:hover{
     cursor: pointer;
+}
+
+.gallery-section{
+    padding: 4vw 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 4vw;
+}
+
+.portfolio-img{
+    width: 28.5vw;
+    border-radius: 0.5vw;
+    opacity: 0;
+    object-fit: cover;
+    clip-path: inset(2px 2px 2px 2px); 
+    transition: opacity 1.6s ease-out;
+    border-radius: 0.8vw;
 }
 
