@@ -1,3 +1,5 @@
+/* global styles */
+
 *,
 *::before,
 *::after {
@@ -10,10 +12,54 @@
   --white: #EDF2EF;
 }
 
-.body{
+body{
 font-family: 'Montserrat', sans-serif;
 }
 
 .logo{
     font-family: 'Crimson Pro', serif;
+    font-weight: 600;
+    font-size: 2vw;
+}
+
+.dark{
+    color: var(--green);
+    background-color: var(--forest);
+}
+
+.light{
+    color: var(--forest);
+    background-color: var(--white);
+}
+
+/* section styles  */
+
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1; 
+    padding: 0 3vw;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right{
+    display: flex;
+    font-size: 1.3vw;
+    gap: 1vw;
+    align-items: center;
+}
+
+.contact-btn{
+    border: 0.15vw solid;
+    border-radius: 3.2vw; 
+    padding: 1vw 1.5vw; 
+    background-color: var(--green);
+    color: var(--forest);
+    font-weight: 600;
 }
