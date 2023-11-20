@@ -1,5 +1,4 @@
 /* global styles */
-
 *,
 *::before,
 *::after {
@@ -55,7 +54,6 @@ p{
 }
 
 /* section styles  */
-
 nav{
     position: sticky;
     top: 0;
@@ -122,16 +120,24 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: -0.3vw 0;
+    margin: -0.15vw 0;
 }
 
-.accordion-content{
-    display: none;
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
 }
 
-.active{
-    display: block;
+.active {
+    max-height: 100vh; 
+    transition: max-height 0.8s ease-in-out;
 }
+
+.accordion-content p{
+    padding: 1.4vw 0;
+}
+
 
 .expand-icon{
     width: 3.2vw;

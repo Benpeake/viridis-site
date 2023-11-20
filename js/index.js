@@ -8,8 +8,9 @@ accordionItems.forEach(item => {
     expandIcon.addEventListener('click', function () {
         accordContent.classList.toggle('active');
         const newSrc = accordContent.classList.contains('active')
-        ? 'images/remove_icon.svg'
-        : 'images/expand_icon.svg';
+            ? 'images/remove_icon.svg'
+            : 'images/expand_icon.svg';
         expandIcon.src = newSrc;
     });
 });
+
