@@ -11,10 +11,50 @@
   --white: #EDF2EF;
 }
 
+
 body{
 font-family: 'Montserrat', sans-serif;
 margin: 0;
 padding: 0;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+
+}
+
+input{
+    background-color: var(--white);
+    border: none;
+    border-bottom: solid 0.3vw;
+    font-size: 2.4vw;
+    font-weight: 500;
+    padding-left: 0.5vw;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border: 0.2vw solid;
+    border-radius: 3.2vw; 
+    padding: 1vw 1.5vw; 
+    background-color: var(--forest);
+    color: var(--green);
+    font-weight: 600;
+    font-size: 1.6vw;
+}
+
+button:hover {
+    background-color: var(--green);
+    color: var(--forest);
+    cursor: pointer;
 }
 
 .logo{
@@ -33,6 +73,19 @@ padding: 0;
     background-color: var(--white);
 }
 
+.green{
+    color: var(--forest);
+    background-color: var(--green);
+}
+
+.white{
+    color: var(--white);
+}
+
+.green p{
+    font-weight: 400;
+}
+
 h1{
     font-size: 4.4vw;
     font-weight: 600;
@@ -40,7 +93,9 @@ h1{
 
 h2{
     font-size: 3.4vw;
-    font-weight: 500;
+    font-weight: 600;
+    margin: 0;
+    margin: 0;
 }
 
 h3{
@@ -55,7 +110,19 @@ p{
 
 .central-title{
     text-align: center;
+    padding-top: 0;
+    padding-bottom: 3vw;
     margin: 0;
+}
+
+nav a:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+
+label {
+    font-size: 2.4vw;
+    font-weight: 500;
 }
 
 /* section styles  */
@@ -81,12 +148,18 @@ nav{
 }
 
 .contact-btn{
-    /* border: 0.15vw solid; */
+    border: 0.2vw solid;
     border-radius: 3.2vw; 
     padding: 1vw 1.5vw; 
     background-color: var(--green);
     color: var(--forest);
     font-weight: 600;
+}
+
+.contact-btn:hover{
+    color: var(--green);
+    background-color: var(--forest);
+    cursor: pointer;
 }
 
 .landing-section{
@@ -114,12 +187,24 @@ nav{
 .services-section{
     display: grid;
     grid-template-columns:1fr 2fr;
-    padding: 0 3vw;
+    padding: 6vw 3vw;
     gap: 6vw;
 }
 
+.services-section  h2
+.services-section  h3{
+    margin: 0;
+}
+
 .accordion-container{
-    margin: 4vw 0 ;
+    margin: 0vw 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.services-accord{
+    padding-top: 1.5vw;
 }
 
 .accordion-item{
@@ -146,7 +231,6 @@ nav{
     padding: 1.4vw 0;
 }
 
-
 .expand-icon{
     width: 3.2vw;
 }
@@ -156,7 +240,7 @@ nav{
 }
 
 .gallery-section{
-    padding: 4vw 3vw;
+    padding: 3vw 3vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -176,8 +260,11 @@ nav{
 .about-section{
     display: grid;
     grid-template-columns:2fr 1fr;
-    padding: 4vw 3vw;
     gap: 6vw;
+}
+
+.about-section-container{
+    padding: 6vw 3vw;
 }
 
 .about-section img {
@@ -243,4 +330,79 @@ nav{
 
 .active-section-link{
     opacity: 1;
+}
+
+.cost-calculator{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    padding: 6vw 3vw;
+    gap: 6vw;
+}
+
+.cost-calculator-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+.cost-calculator-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 3vw;
+    margin: 0;
+    padding: 0;
+}
+
+.cost-calculator-right p{
+    margin: 0;
+}
+
+.cost-calculator-right h2{
+    margin: 0;
+    padding: 0;
+    }
+
+.form-segment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.button-segment{
+    display: flex;
+    justify-content: end;
+}
+
+.estimate-result h3{
+    margin: 0;
+    font-weight: 600;
+    padding-bottom: 1vw;
+}
+
+.estimate-result{
+    border-bottom: solid 0.3vw;
+}
+
+.faq-section{
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    padding: 6vw 3vw;
+    gap: 6vw;
+}
+
+.faq-img img{
+    width: 100%;
+    height: auto; 
+    display: block; 
+    opacity: 0.8;
+    object-fit: cover;
+    clip-path: inset(2px 2px 2px 2px); 
+}
+
+.accordion-container h2{
+    padding-bottom: 3vw;
 }

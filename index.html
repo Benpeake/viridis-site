@@ -35,7 +35,7 @@
                     <p><a>Gallery</a></p>
                     <p><a>About</a></p>
                     <p><a>Services</a></p>
-                    <p class="contact-btn"><a>Contact</a></p>
+                    <p class="contact-btn">Contact</p>
                 </div>
             </div>
         </nav>
@@ -53,7 +53,7 @@
                     <h2>Services</h2>
                     <p>Skillful design, reliable building, and show-stopping planting. Our range of garden services in Bath and the surrounding area is varied and always exceptionally delivered.</p>
                 </div>
-                <div class="accordion-container">
+                <div class="accordion-container services-accord">
                     <div class="accordion-section">
                         <div class="accordion-item">
                             <h3>Design</h3>
@@ -86,7 +86,7 @@
                             <h3>Maintenance</h3>
                             <img class="expand-icon" src="images/expand_icon.svg" alt="expand icon">
                         </div>
-                        <div class="accordion-content">
+                        <div class="accordion-content last-accord">
                             <p>When done correctly, planting has the power to transform a garden. Our extensive knowledge, practical skills and high-quality resources mean we can source and implement stunning displays that bring your outdoor space to life! From bountiful borders, cottage-style beds, heavenly rose gardens, Mediterranean-esque patios, herb planters, or naturally-styled meadow areas, we strive to create an atmosphere that&apos;s right for you, with seasonal planting that works all year-round.</p>
                         </div>
                     </div>
@@ -95,18 +95,15 @@
             <section class="gallery-section" id="galleryContainer">
                 <img class="portfolio-img" src="images/viridis_garden_1.jpg" alt="impressive patio and seating area">
                 <img class="portfolio-img" src="images/viridis_garden_2.jpg" alt="garden water feature">
-                <!-- <img class="portfolio-img" src="images/viridis_garden_3.jpg" alt="expand icon"> -->
                 <img class="portfolio-img" src="images/viridis_garden_4.jpg" alt="outdoor barbeque">
                 <img class="portfolio-img" src="images/viridis_garden_5.jpg" alt="garden sculpture">
                 <img class="portfolio-img" src="images/viridis_garden_6.jpg" alt="garden seating area">
                 <img class="portfolio-img" src="images/viridis_garden_7.jpg" alt="conservatory">
                 <img class="portfolio-img" src="images/viridis_garden_8.jpg" alt="garden childrens climbing frame">
-                <!-- <img class="portfolio-img" src="images/viridis_garden_9.jpg" alt="expand icon"> -->
                 <img class="portfolio-img" src="images/viridis_garden_10.jpg" alt="garden patio">
                 <img class="portfolio-img" src="images/viridis_garden_11.jpg" alt="garden flowers">
-                <!-- <img class="portfolio-img" src="images/viridis_garden_12.jpg" alt="expand icon"> -->
             </section>
-            <section>
+            <section class="about-section-container">
                 <h2 class="central-title">Get to know us</h2>
                 <div class="about-section">
                     <div class="about-left">
@@ -116,7 +113,7 @@
                         </div>
                         <div>
                             <p class="about-copy">
-                                Jemma has 10+ years in garden design and landscaping, during which time she has worked on a number of beautiful and prestigious sites including multiple gardens for the Duchy of Cornwall. Jemma loves being on site come rain or shine but also has a huge passion for the design process behind the scenes, and her passion for creativity and functionality has enabled  her to develop and craft her own original style that balances practicality and beauty. 
+                                Jemma has 10+ years in garden design and landscaping, during which time she has worked on a number of beautiful and prestigious sites including multiple gardens for the Duchy of Cornwall. Jemma loves being on site come rain or shine but also has a huge passion for the design process behind the scenes, and her passion for creativity and functionality has enabled  her to develop and craft her own original style that balances practicality and beauty. 
                             </p>
                             <p class="about-copy-p2"></p>
                         </div>
@@ -125,6 +122,67 @@
                         <img class="about-img" src="images/viridis_jemma.jpg" alt="jemma in garden">
                     </div>
                 </div>
+            </section>
+            <section class="cost-calculator green">
+                <div class="cost-calculator-left">
+                    <form action="" method="post" class="quote-calc" id="quoteForm">
+                        <div class="form-segment">
+                            <label for="length">Length (ft):</label>
+                            <input type="number" id="length" name="length" step="1" required>
+                        </div>
+                        <div class="form-segment">
+                            <label for="width">Width (ft):</label>
+                            <input type="number" id="width" name="width" step="1" required>
+                        </div>
+                        <div class="button-segment">
+                            <button class="quote-submit" type="submit">Submit</button>
+                        </div>
+                        <div class="estimate-result">
+                            <h3 id="quote-result"> Estimate: £</h3>
+                        </div>
+                    </form>
+                </div>
+                <div class="cost-calculator-right">
+                    <h2>How much does a new garden cost?</h2>
+                    <p>Every garden project is unique and the cost will vary depending on numerous factors. Because of this we will always provide a free consultation and quote that's bespoke to your requirments. If however you'd like a quick estimate please submit your garden dimensions.</p>
+                </div>
+            </section>
+            <section class="faq-section">
+                <div class="faq-img">
+                    <img class="about-img" src="images/viridis_garden_body_1.jpg" alt="pruning lavender in garden">
+                </div>
+                    <div class="accordion-container">
+                        <div>
+                            <h2>FAQ</h2>
+                        </div>
+                        <div class="accordion-section">
+                            <div class="accordion-item">
+                                <h3>Question number 1</h3>
+                                <img class="expand-icon" src="images/expand_icon.svg" alt="expand icon">
+                            </div>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio cum, accusantium voluptatum tempore alias delectus similique sapiente quaerat soluta, ad totam voluptatibus nihil sit fugiat perspiciatis eum cupiditate ea!</p>
+                            </div>
+                        </div>
+                        <div class="accordion-section">
+                            <div class="accordion-item">
+                                <h3>Question number 2</h3>
+                                <img class="expand-icon" src="images/expand_icon.svg" alt="expand icon">
+                            </div>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus hic ex enim laudantium officiis, veniam velit qui sed quod vero, ratione earum doloribus quidem tempore itaque quae, rerum voluptates delectus?</p>
+                            </div>
+                        </div>
+                        <div class="accordion-section">
+                            <div class="accordion-item">
+                                <h3>Question number 3</h3>
+                                <img class="expand-icon" src="images/expand_icon.svg" alt="expand icon">
+                            </div>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis pariatur adipisci neque atque nulla officia labore fuga eius maxime odit ipsum suscipit molestias, doloremque id aut cum amet. Unde, maxime.</p>
+                            </div>
+                        </div>
+                    </div>
             </section>
         </main>
     </body>

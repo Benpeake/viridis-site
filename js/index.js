@@ -53,7 +53,6 @@ function checkSlide() {
 document.addEventListener("scroll", debounce(checkSlide));
 
 //handle about section nav
-
 const aboutCopy = document.querySelector('.about-copy')
 const aboutCopyP2 = document.querySelector('.about-copy-p2')
 const aboutImg = document.querySelector('.about-img')
@@ -77,4 +76,18 @@ teamLink.addEventListener('click', function(){
     jemmaLink.classList.remove('active-section-link')
     teamLink.classList.add('active-section-link')
 })
+
+//cost calculator logic 
+function quoteCalc (length, width){
+    roundedNum = Math.floor((length * width) * 200)
+    return roundedNum.toLocaleString()
+}
+
+document.getElementById('quoteForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    let length = document.getElementById('length').value;
+    let width = document.getElementById('width').value;
+    let estimate = quoteCalc (length, width);
+    document.getElementById('quote-result').textContent = 'Estimate: £' + estimate;
+});
 
