@@ -201,10 +201,6 @@ nav{
     margin-top: 0;
 }
 
-.about-nav h3:hover{
-    cursor: pointer;
-}
-
 .active-section-link{
     text-decoration: underline;
     text-underline-offset: 2.1vw;
@@ -219,5 +215,32 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 3vw;
+}
 
+.jemma-nav-link:hover{
+    cursor: pointer;
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 2.1vw;
+    text-decoration-thickness: 0.9vw;
+}
+
+.team-nav-link:hover{
+    cursor: pointer;
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 2.1vw;
+    text-decoration-thickness: 0.9vw;
+}
+
+.jemma-nav-link{
+    opacity: 0.6;
+}
+
+.team-nav-link{
+    opacity: 0.6;
+}
+
+.active-section-link{
+    opacity: 1;
 }
