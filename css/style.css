@@ -20,7 +20,7 @@ padding: 0;
 .logo{
     font-family: 'Crimson Pro', serif;
     font-weight: 600;
-    font-size: 2.2vw;
+    font-size: 2.4vw;
 }
 
 .dark{
@@ -53,6 +53,11 @@ p{
     font-weight: 300;
 }
 
+.central-title{
+    text-align: center;
+    margin: 0;
+}
+
 /* section styles  */
 nav{
     position: sticky;
@@ -76,7 +81,7 @@ nav{
 }
 
 .contact-btn{
-    border: 0.15vw solid;
+    /* border: 0.15vw solid; */
     border-radius: 3.2vw; 
     padding: 1vw 1.5vw; 
     background-color: var(--green);
@@ -168,3 +173,51 @@ nav{
     border-radius: 0.8vw;
 }
 
+.about-section{
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    padding: 4vw 3vw;
+    gap: 6vw;
+}
+
+.about-section img {
+    width: 100%;
+    height: auto; 
+    display: block; 
+    opacity: 0.9;
+    object-fit: cover;
+    clip-path: inset(2px 2px 2px 2px); 
+}
+
+.about-nav{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 6vw;
+    border-bottom: solid 0.3vw;
+}
+
+.about-nav h3{
+    margin-top: 0;
+}
+
+.about-nav h3:hover{
+    cursor: pointer;
+}
+
+.active-section-link{
+    text-decoration: underline;
+    text-underline-offset: 2.1vw;
+    text-decoration-thickness: 0.9vw;
+}
+
+.about-copy{
+    margin: 0;
+}
+
+.about-left{
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+
+}
