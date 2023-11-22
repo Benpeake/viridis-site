@@ -91,6 +91,50 @@ document.getElementById('quoteForm').addEventListener('submit', function (event)
     document.getElementById('quote-result').textContent = 'Estimate: £' + estimate;
 });
 
-  
+//scroll link logic
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollLinks = document.querySelectorAll(".scroll-link");
+
+    scrollLinks.forEach((link) => {
+        link.addEventListener("click", smoothScroll);
+    });
+
+    function smoothScroll(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href");
+        const targetSection = document.querySelector(targetId);
+        
+        if (!targetSection) {
+            console.error(`Target section with ID '${targetId}' not found.`);
+            return;
+        }
+
+        const targetPosition = targetSection.offsetTop;
+        const offset = 45; // Adjust the offset as needed
+        const targetPositionWithOffset = targetPosition - offset;
+        const startPosition = window.scrollY;
+        const distance = targetPositionWithOffset - startPosition;
+        const duration = 1500; // Adjust the scroll duration as needed
+        let start = null;
+
+        function animation(currentTime) {
+            if (start === null) start = currentTime;
+            const timeElapsed = currentTime - start;
+            const run = ease(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t + b;
+            t--;
+            return (-c / 2) * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+});
 
 

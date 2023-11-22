@@ -172,7 +172,7 @@ nav{
 }
 
 .contact-btn:hover{
-    color: var(--green);
+    color: var(--white);
     background-color: var(--forest);
     cursor: pointer;
 }
