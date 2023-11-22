@@ -432,7 +432,7 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 3vw;
+    gap: 1.5vw;
 }
 
 .smaller-icon{
