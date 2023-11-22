@@ -41,6 +41,17 @@ input:focus {
     outline: none;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.underline{
+    text-decoration: underline;
+    text-underline-offset: 0.4vw;
+    text-decoration-thickness: 0.2vw;
+}
+
 button {
     border: 0.2vw solid;
     border-radius: 3.2vw; 
@@ -80,6 +91,10 @@ button:hover {
 
 .white{
     color: var(--white);
+}
+
+.bold{
+    font-weight: 600;
 }
 
 .green p{
@@ -405,4 +420,41 @@ nav{
 
 .accordion-container h2{
     padding-bottom: 3vw;
+}
+
+footer{
+    padding: 6vw 3vw;
+    display: grid;
+    grid-template-columns:2fr 1fr;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3vw;
+}
+
+.smaller-icon{
+    width: 3.1vw;
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-right h2{
+font-size: 5vw;
+font-family: 'Crimson Pro', serif;
+margin: 0;
+padding: 0;
+}
+
+.footer-right p{
+    font-size: 1.2vw;
+    margin: 0;
+    padding: 0;
 }
