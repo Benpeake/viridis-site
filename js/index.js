@@ -1,18 +1,31 @@
 // accordion logic
 const accordionItems = document.querySelectorAll('.accordion-section');
+let openSection = null;
 
 accordionItems.forEach(item => {
     const expandIcon = item.querySelector('.expand-icon');
     const accordContent = item.querySelector('.accordion-content');
 
     expandIcon.addEventListener('click', function () {
+        // Close the previously open section
+        if (openSection && openSection !== accordContent) {
+            openSection.classList.remove('active');
+            const prevExpandIcon = openSection.parentElement.querySelector('.expand-icon');
+            prevExpandIcon.src = 'images/expand_icon.svg';
+        }
+
+        // Toggle the current section
         accordContent.classList.toggle('active');
         const newSrc = accordContent.classList.contains('active')
             ? 'images/remove_icon.svg'
             : 'images/expand_icon.svg';
         expandIcon.src = newSrc;
+
+        // Update the open section
+        openSection = accordContent.classList.contains('active') ? accordContent : null;
     });
 });
+
 
 //image fade in effect
 const fadeObjects = document.querySelectorAll(".portfolio-img");
@@ -134,7 +147,7 @@ scrollLinks.forEach((link) => {
     link.addEventListener("click", smoothScroll);
 });
 
-//on link click show gallery images as well as use smooth scroll
+//on link-click show gallery images as well as use smooth scroll
 scrollLinks.forEach((link) => {
     link.addEventListener("click", (e) =>{
         fadeObjects.forEach((image) => {
@@ -144,3 +157,57 @@ scrollLinks.forEach((link) => {
         smoothScroll(e)
     })
 });
+
+//form error handling...
+const textArea = document.getElementById('message')
+
+const requiredFields = document.querySelectorAll('required')
+
+document.querySelector('.contact-submit').addEventListener('click', function() {
+    
+    const emailInput = document.getElementById('email');
+    const emailRequired = document.querySelector('.email-req');
+    const nameInput = document.getElementById('name');
+    const nameRequired = document.querySelector('.name-req');
+    const textArea = document.getElementById('message')
+    const textRequired = document.querySelector('.text-req')
+
+    if (!emailInput.checkValidity()) {
+        emailRequired.classList.add('error');
+    } else {
+        emailRequired.classList.remove('error');
+    }
+
+    if (!nameInput.checkValidity()) {
+        nameRequired.classList.add('error');
+    } else {
+        nameRequired.classList.remove('error');
+    }
+
+    if (!textArea.checkValidity()) {
+        textRequired.classList.add('error');
+    } else {
+        textRequired.classList.remove('error');
+    }
+});
+
+document.querySelector('.quote-submit').addEventListener('click', function() {
+
+    const lengthInput = document.getElementById('length')
+    const widthInput = document.getElementById('width')
+    const lengthRequired = document.querySelector('.length-req')
+    const widthRequired = document.querySelector('.width-req')
+
+    if (!lengthInput.checkValidity()) {
+        lengthRequired.classList.add('error');
+    } else {
+        lengthRequired.classList.remove('error');
+    }
+
+    if (!widthInput.checkValidity()) {
+        widthRequired.classList.add('error');
+    } else {
+        widthRequired.classList.remove('error');
+    }
+
+})

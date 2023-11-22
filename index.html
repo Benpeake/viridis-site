@@ -41,7 +41,7 @@
                     <p><a class="scroll-link" href="#quote">Quote-Estimate</a></p>
                     <p>|</p>
                     <p><a class="scroll-link" href="#faq">FAQ</a></p>
-                    <p class="contact-btn"><a href="">Contact</a></p>
+                    <p class="contact-btn"><a class="scroll-link" href="#contact">Contact</a></p>
                 </div>
             </div>
         </nav>
@@ -51,12 +51,12 @@
                     <img class="hero-img" src="images/viridis_garden_hero.-1jpg.jpg" alt="gardening">
                 </div>
                 <div class="la-right">
-                    <h1>High-quality garden design, landscaping, maintenance and planting services.</h1>
+                    <h1 class="">High-quality garden design, landscaping, maintenance and planting services.</h1>
                 </div>
             </section>
             <section class="services-section" id="services">
                 <div class="services-left">
-                    <h2>Services</h2>
+                    <h2 class="">Services</h2>
                     <p>Skillful design, reliable building, and show-stopping planting. Our range of garden services in Bath and the surrounding area is varied and always exceptionally delivered.</p>
                 </div>
                 <div class="accordion-container services-accord">
@@ -133,11 +133,11 @@
                 <div class="cost-calculator-left">
                     <form action="" method="post" class="quote-calc" id="quoteForm">
                         <div class="form-segment">
-                            <label for="length">Length (ft):</label>
+                            <label for="length">Length ft: <span class="required length-req">*</span></label>
                             <input type="number" id="length" name="length" step="1" required>
                         </div>
                         <div class="form-segment">
-                            <label for="width">Width (ft):</label>
+                            <label for="width">Width ft: <span class="required width-req">*</span></label>
                             <input type="number" id="width" name="width" step="1" required>
                         </div>
                         <div class="button-segment">
@@ -153,13 +153,85 @@
                     <p>Every garden project is unique and the cost will vary depending on numerous factors. Because of this we will always provide a free consultation and quote that's bespoke to your requirments. If however you'd like a quick estimate please submit your garden dimensions.</p>
                 </div>
             </section>
-            <section class="faq-section" id="faq">
-                <div class="faq-img">
-                    <img class="about-img" src="images/viridis_garden_body_1.jpg" alt="pruning lavender in garden">
+            <section class="contact-section" id="contact">
+                <div class="contact-left">
+                    <h2 class="">Contact</h2>
+                    <p>If you&apos;re interested in our services or have any questions, please contact us by filling out our enquiry form. We look forward to hearing about your proposed project and aim to get back to you asap!</p>
                 </div>
+                <div class="contact-right">
+                    <form action="https://formsubmit.co/ed8e1437f43cc2c0192fcc98612d349c" method="POST" class="quote-calc" id="contactForm">
+                        <div class="form-segment">
+                            <label for="name">Name: <span class="required name-req"> *</span></label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-segment">
+                            <label for="email">Email: <span class="required email-req"> *</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-segment">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel">
+                        </div>
+                        <div class="form-segment">
+                            <label for="postcode">Postcode:</label>
+                            <input type="text" id="postcode" name="postcode" autocomplete="postal-code">
+                        </div>
+                        <div class="radio-button">
+                            <div>
+                                <label>Garden size:</label>
+                            </div>
+                            <div class="button-container">
+                                <label for="garden-size-small">
+                                    <span class="radio-label">Small</span>
+                                    <input type="radio" id="garden-size-small" name="garden-size" value="small">
+                                </label>
+                                <label for="garden-size-medium">
+                                    <span class="radio-label">Medium</span>
+                                    <input type="radio" id="garden-size-medium" name="garden-size" value="medium">
+                                </label>
+                                <label for="garden-size-large">
+                                    <span class="radio-label">Large</span>
+                                    <input type="radio" id="garden-size-large" name="garden-size" value="large">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="radio-button">
+                            <div>
+                                <label>Service(s):</label>
+                            </div>
+                            <div class="services-required button-container">
+                                <label class="services-required-design">
+                                    <span class="radio-label">Design</span>
+                                    <input type="checkbox" id="services-required-design" name="services-required" value="design">
+                                </label>
+                                <label class="services-required-planting">
+                                    <span class="radio-label">Planting</span>
+                                    <input type="checkbox" id="services-required-planting" name="services-required" value="planting">
+                                </label>
+                                <label class="services-required-build">
+                                    <span class="radio-label">Build</span>
+                                    <input type="checkbox" id="services-required-build" name="services-required" value="build">
+                                </label>
+                                <label class="services-required-maintain">
+                                    <span class="radio-label">Maintain</span>
+                                    <input type="checkbox" id="services-required-maintain" name="services-required" value="maintenance">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="textarea">
+                            <label for="message">Message: <span class="required text-req"> *</span></label>
+                            <textarea id="message" name="message"  rows="4" required></textarea>
+                        </div>
+                        <div class="button-segment">
+                            <button class="contact-submit" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="faq-section" id="faq">
                     <div class="accordion-container">
                         <div>
-                            <h2>FAQ</h2>
+                            <h2 class="">FAQ</h2>
                         </div>
                         <div class="accordion-section">
                             <div class="accordion-item">
@@ -189,6 +261,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="faq-img">
+                        <img class="about-img" src="images/viridis_garden_body_1.jpg" alt="pruning lavender in garden">
+                    </div>
             </section>
         </main>
         <footer class="green">
@@ -206,7 +281,6 @@
             </div>
             <div class="footer-right">
                 <div><h2>VIRIDIS</h2></div>
-                <div><p>landscaping + Garden Design</p></div>
             </div>
         </footer>
     </body>

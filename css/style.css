@@ -8,7 +8,8 @@
 :root {
   --forest: #15241C;
   --green: #2B9F65;
-  --white: #EDF2EF;
+  --white: #D6D5C9;
+  --red: #A22C29;
 }
 
 
@@ -25,6 +26,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1.5vw;
+    padding-top: 1vw;
 
 }
 
@@ -32,13 +34,18 @@ input{
     background-color: var(--white);
     border: none;
     border-bottom: solid 0.3vw;
-    font-size: 2.4vw;
-    font-weight: 500;
-    padding-left: 0.5vw;
+    font-size: 2.1vw;
+    font-weight: 400;
+    padding: 0.3vw 0.5vw;
 }
 
 input:focus {
     outline: none;
+}
+
+.contact-right input{
+    border-bottom: solid 0.3vw var(--white);
+    background-color: var(--green);
 }
 
 a{
@@ -53,19 +60,30 @@ a{
 }
 
 button {
-    border: 0.2vw solid;
+    border: 0.3vw solid;
     border-radius: 3.2vw; 
     padding: 1vw 1.5vw; 
-    background-color: var(--forest);
-    color: var(--green);
+    background-color: var(--green);
+    color: var(--forest);
     font-weight: 600;
     font-size: 1.6vw;
+    margin-top: 1vw;
+}
+
+.contact-right button{
+    background-color: var(--forest);
+    color: var(--green);
 }
 
 button:hover {
+    background-color: var(--forest);
+    color: var(--green);
+    cursor: pointer;
+}
+
+.contact-right button:hover{
     background-color: var(--green);
     color: var(--forest);
-    cursor: pointer;
 }
 
 .logo{
@@ -138,6 +156,12 @@ nav a:hover{
 label {
     font-size: 2.4vw;
     font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.required{
+    color: var(--white);
 }
 
 /* section styles  */
@@ -234,7 +258,7 @@ nav{
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out;
+    transition: max-height 0.8s ease-out;
 }
 
 .active {
@@ -404,9 +428,10 @@ nav{
 
 .faq-section{
     display: grid;
-    grid-template-columns:1fr 2fr;
+    grid-template-columns:2fr 1fr;
     padding: 6vw 3vw;
     gap: 6vw;
+    border-top: solid 0.3vw;
 }
 
 .faq-img img{
@@ -447,14 +472,89 @@ footer{
 }
 
 .footer-right h2{
-font-size: 5vw;
-font-family: 'Crimson Pro', serif;
-margin: 0;
-padding: 0;
-}
-
-.footer-right p{
-    font-size: 1.2vw;
+    font-size: 6vw;
+    font-weight: 700;
+    font-family: 'Crimson Pro', serif;
     margin: 0;
     padding: 0;
+    text-decoration: underline;
+    text-underline-offset: 0.6vw;
+    text-decoration-thickness: 0.8vw;
 }
+
+.contact-section{
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    padding: 6vw 3vw;
+    gap: 6vw;
+}
+
+.contact-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-right .form-segment input{
+    width: 40vw
+}
+
+.radio-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    gap: 1.5vw;
+}
+
+/* radio btn style */
+input[type="radio"],
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1vw;
+    height: 1vw;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--white);
+  }
+
+  input[type="radio"]:checked,
+  input[type="checkbox"]:checked {
+    background-color: var(--green) 
+  }
+  .radio-label{
+    font-size: 1.6vw ;
+  }
+
+  textarea{
+    width: 40vw;
+    background-color: var(--green);
+    border: none;
+    font-size: 1.6vw;
+    font-weight: 400;
+    padding: 0.3vw 0.5vw;
+    resize: vertical; 
+    max-width: 40vw;
+  }
+
+  textarea:focus{
+    outline: none;
+  }
+
+  .textarea{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2vw;
+  }
+
+  .error{
+    color: var(--red);
+  }
