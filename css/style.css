@@ -635,8 +635,8 @@ input[type="checkbox"] {
     border-radius: 50%;
     background-color: var(--white);
   }
-    
-    .contact-right input{
+
+    .contact-right .form-segment input{
         border-bottom: solid 3px var(--white);
     }
     
