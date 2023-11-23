@@ -881,6 +881,10 @@ input[type="checkbox"] {
         padding-bottom:6vw;
     }
 
+    .button-container{
+        padding-bottom: 1.2vw;
+    }
+
   }
 
   @media screen and (max-width: 525px){
