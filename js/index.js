@@ -211,3 +211,30 @@ document.querySelector('.quote-submit').addEventListener('click', function() {
     }
 
 })
+
+//handle mobile menu
+const mobileIcon = document.querySelector('.mobile-icon')
+const mobileMenuModal = document.querySelector('.mobile-menu-modal')
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu-item')
+
+mobileIcon.addEventListener('click', ()=>{
+    if (mobileIcon.src.includes('images/menu-icon.svg')) {
+        mobileIcon.src = 'images/close-icon.svg';
+        mobileMenuModal.classList.add('appear')
+    } else {
+        mobileIcon.src = 'images/menu-icon.svg';
+        mobileMenuModal.classList.remove('appear')
+    }
+})
+
+mobileMenuLinks.forEach((link) =>{
+    link.addEventListener('click', ()=>{
+    if (mobileIcon.src.includes('images/menu-icon.svg')) {
+        mobileIcon.src = 'images/close-icon.svg';
+        mobileMenuModal.classList.add('appear')
+    } else {
+        mobileIcon.src = 'images/menu-icon.svg';
+        mobileMenuModal.classList.remove('appear')
+    }
+    })
+})

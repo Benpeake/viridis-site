@@ -165,11 +165,41 @@ label {
 }
 
 /* section styles  */
+
+.mobile-menu-modal{
+    z-index:1; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: var(--forest);
+}
+
+.appear{
+    display: flex;
+}
+
+.mobile-menu-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu-item{
+    font-size: 8vw;
+    font-weight: 600;
+}
+
 nav{
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1; 
+    z-index: 2; 
     padding: 0 3vw;
 }
 
@@ -811,6 +841,7 @@ input[type="checkbox"] {
     .mobile-icon{
         height: 40px;
         width: auto;
+        z-index: 2; 
     }
 
     .mobile-icon:hover{
