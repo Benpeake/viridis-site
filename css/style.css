@@ -79,6 +79,9 @@
     .required{
         color: var(--white);
     }
+    .contact-section .required{
+        color: var(--green);
+    }
 
     .underline{
         text-decoration: underline;
@@ -306,7 +309,7 @@
     }
 
     .contact-right .form-segment input{
-        width: 40vw
+        width: 45vw
     }
 
 /* FAQ section */
@@ -315,7 +318,6 @@
         grid-template-columns:2fr 1fr;
         padding: 4vw 3vw;
         gap: 6vw;
-        border-top: solid 0.3vw;
     }
 
     .faq-img img{
@@ -431,11 +433,10 @@
         gap: 2vw;
     }
 
-
     input{
-        background-color: var(--white);
+        background-color:  #fff;
         border: none;
-        border-bottom: solid 0.3vw;
+        border-bottom: solid 0.2vw;
         font-size: 1.6vw;
         font-weight: 600;
         padding: 0.3vw 0.5vw;
@@ -444,8 +445,10 @@
             outline: none;
         }
         .contact-right input{
-            border-bottom: solid 0.3vw var(--white);
-            background-color: var(--green);
+            border-bottom: solid 0.2vw var(--forest);
+            background-color: #fff;
+            font-size: 1.6vw;
+            font-weight: 500;
         }
 
     .button-segment{
@@ -471,18 +474,25 @@
 
 
     .dark-button{
-        background-color: var(--forest);
-        color: var(--green);
+        background-color: var(--white);
+        color: var(--forest);
     }
         .dark-button:hover{
-            background-color: var(--green);
-            color: var(--forest);
+            background-color: var(--forest);
+            color: var(--white);
         }
 
 
     label {
         font-size: 2.2vw;
         font-weight: 600;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-section label {
+        font-size: 1.8vw;
+        font-weight: 500;
         margin: 0;
         padding: 0;
     }
@@ -496,7 +506,7 @@
         .button-container{
             display: flex;
             flex-direction: row;
-            width: 40vw;
+            width: 45vw;
             gap: 1.5vw;
         }
 
@@ -509,11 +519,11 @@
         height: 1vw;
         border: none;
         border-radius: 50%;
-        background-color: var(--white);
+        background-color: #fff;
     }
         input[type="radio"]:checked,
         input[type="checkbox"]:checked {
-            background-color: var(--green) 
+            background-color: var(--forest) 
         }
 
     .radio-label{
@@ -521,15 +531,16 @@
     }
 
     textarea{
-        width: 40vw;
-        background-color: var(--green);
+        width: 45vw;
+        background-color: #fff;
         border: none;
         font-size: 1.6vw;
-        font-weight: 600;
+        font-weight: 500;
         padding: 0.3vw 0.5vw;
         resize: vertical; 
-        max-width: 40vw;
-        border-bottom: solid 0.3vw var(--white);
+        max-width: 45vw;
+        border-bottom: solid 0.2vw var(--forest);
+        margin-top: 0.3vw;
     }
         textarea:focus{
             outline: none;
@@ -601,7 +612,7 @@
     
     
     input{
-        border-bottom: solid 3px;
+        border-bottom: solid 2px;
         font-size: 16px;
         padding: 0.3vw 0.5vw;
     }
@@ -611,15 +622,16 @@
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
         border: none;
         border-radius: 50%;
-        background-color: var(--white);
+        background-color: #fff;
     }
 
     .contact-right .form-segment input{
-        border-bottom: solid 3px var(--white);
+        border-bottom: solid 2px var(--forest);
+        font-size: 16px;
     }
     
     .underline{
@@ -722,10 +734,6 @@
     .estimate-result{
         border-bottom: solid 3px;
     }
-    
-    .faq-section{
-        border-top: solid 3px;
-    }
 
     
     .social-icons{
@@ -743,6 +751,13 @@
         font-size: 60px;
         text-underline-offset: 6px;
         text-decoration-thickness: 8px;
+    }
+
+    textarea{
+        font-size: 16px;
+        padding: 3px 5px;
+        border-bottom: solid 2px var(--forest);
+        margin-top: 2px;
     }
     
 
@@ -799,8 +814,6 @@
     textarea{
         width: 70vw;
         max-width: 70vw;
-        border-bottom: solid 3px var(--white);
-        font-size: 16px;
       }
 
       .button-container{
@@ -830,6 +843,11 @@
 
     .mobile-icon:hover{
         cursor: pointer;
+    }
+
+    .contact-section label{
+        font-size: 18px;
+        font-weight: 500;
     }
 
   }
