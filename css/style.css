@@ -561,6 +561,7 @@
         resize: vertical; 
         max-width: 45vw;
         margin-top: 0.3vw;
+        border-radius: 0;
     }
         textarea:focus{
             outline: none;
