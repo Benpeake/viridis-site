@@ -72,7 +72,7 @@
     .central-title{
         text-align: center;
         padding-top: 0;
-        padding-bottom: 3vw;
+        padding-bottom: 6vw;
         margin: 0;
     }
 
@@ -167,8 +167,12 @@
     .services-section{
         display: grid;
         grid-template-columns:1fr 2fr;
-        padding: 4vw 3vw;
+        padding: 8vw 3vw 4vw 3vw;
         gap: 6vw;
+    }
+
+    .services-left{
+       
     }
 
 /* Gallery secttion */
@@ -200,7 +204,7 @@
     }
 
     .about-section-container{
-        padding: 4vw 3vw;
+        padding: 4vw 3vw 8vw 3vw;
     }
 
     .about-section img {
@@ -299,7 +303,7 @@
     .contact-section{
         display: grid;
         grid-template-columns:1fr 2fr;
-        padding: 4vw 3vw;
+        padding: 8vw 3vw;
         gap: 6vw;
     }
 
@@ -316,7 +320,7 @@
     .faq-section{
         display: grid;
         grid-template-columns:2fr 1fr;
-        padding: 4vw 3vw;
+        padding: 8vw 3vw;
         gap: 6vw;
     }
 
@@ -414,6 +418,21 @@
         cursor: pointer;
     }
 
+    .accordion-content.accordion-content-withimage{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        align-items: start;
+        gap: 2.8vw;
+    }
+
+    .accord-img{
+        max-width: 100%;
+        height: auto;
+        padding: 2.8vw 0;
+        margin: 0;
+        opacity: 0.8;
+    }
+
 /* Forms */
     form {
         margin: 0;
@@ -436,19 +455,17 @@
     input{
         background-color:  #fff;
         border: none;
-        border-bottom: solid 0.2vw;
         font-size: 1.6vw;
-        font-weight: 600;
+        font-weight: 400;
         padding: 0.3vw 0.5vw;
     }
         input:focus {
             outline: none;
         }
         .contact-right input{
-            border-bottom: solid 0.2vw var(--forest);
             background-color: #fff;
             font-size: 1.6vw;
-            font-weight: 500;
+            font-weight: 400;
         }
 
     .button-segment{
@@ -535,11 +552,10 @@
         background-color: #fff;
         border: none;
         font-size: 1.6vw;
-        font-weight: 500;
+        font-weight: 400;
         padding: 0.3vw 0.5vw;
         resize: vertical; 
         max-width: 45vw;
-        border-bottom: solid 0.2vw var(--forest);
         margin-top: 0.3vw;
     }
         textarea:focus{
@@ -576,6 +592,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 80px;
     }
 
     .mobile-menu-item{
@@ -612,7 +629,6 @@
     
     
     input{
-        border-bottom: solid 2px;
         font-size: 16px;
         padding: 0.3vw 0.5vw;
     }
@@ -630,7 +646,6 @@
     }
 
     .contact-right .form-segment input{
-        border-bottom: solid 2px var(--forest);
         font-size: 16px;
     }
     
@@ -697,6 +712,15 @@
         margin: -1.5px 0;
         padding: 12px 0;
     }
+
+    .accordion-content.accordion-content-withimage{
+        gap: 28px;
+    }
+
+    .accord-img{
+        padding: 28px 0;
+    }
+
     
     .expand-icon{
         width: 32px;
@@ -756,7 +780,6 @@
     textarea{
         font-size: 16px;
         padding: 3px 5px;
-        border-bottom: solid 2px var(--forest);
         margin-top: 2px;
     }
     
@@ -773,13 +796,30 @@
       }
 
     .faq-section{
-        padding: 40px 3vw;
+        padding: 60px 3vw;
     }
 
     .contact-section{
         padding: 40px 3vw;
     }
 
+    .accordion-content.accordion-content-withimage {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+    
+    .accord-img {
+        max-width: 50%;
+        height: auto;
+        padding: 0;
+        display: block; 
+        margin: auto; 
+        padding-bottom: 28px;
+    }
+    
   }
 
   @media screen and (max-width: 750px){
@@ -873,7 +913,7 @@
     }
 
     .central-title{
-        padding-bottom:6vw;
+        padding-bottom:60px;
     }
 
     .button-container{
