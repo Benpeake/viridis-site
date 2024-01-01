@@ -545,6 +545,7 @@
 
     .radio-label{
         font-size: 1.6vw ;
+        opacity: 0.6;
     }
 
     textarea{
@@ -825,6 +826,7 @@
   @media screen and (max-width: 750px){
     .gallery-section{
         grid-template-columns: 1fr 1fr;
+        padding: 8vw 3vw;
 
     }
 
@@ -833,7 +835,7 @@
     }
 
     h1{
-        font-size: 38px;
+        font-size: 34px;
     }
 
     footer{
@@ -845,6 +847,7 @@
 
     .contact-section{
         grid-template-columns:1fr;
+        padding: 16vw 3vw;
     }
 
     .contact-right .form-segment input{
@@ -862,6 +865,7 @@
     
     .cost-calculator{
         grid-template-columns:1fr;
+        padding: 16vw 3vw;
     }
 
     .cost-calculator-left{
@@ -890,11 +894,12 @@
         font-weight: 500;
     }
 
-  }
+    .about-section-container{
+        padding: 8vw 3vw 16vw 3vw;
+    }
 
-  @media screen and (max-width: 750px){
-    h1{
-        font-size: 34px;
+    .faq-section{
+        padding: 16vw 3vw;
     }
 
   }
@@ -927,6 +932,10 @@
         grid-template-columns:1fr;
     }
 
+    .la-right{
+        padding: 8vw 6vw;
+    }
+
     .landing-section h1{
         margin: 20px 0;
     }
@@ -937,6 +946,7 @@
 
     .services-section{
         grid-template-columns:1fr;
+        padding: 0 3vw 8vw 3vw;
     }
     .contact-right .form-segment input{
         width: 65vw;
