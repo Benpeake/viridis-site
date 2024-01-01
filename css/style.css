@@ -313,7 +313,8 @@
     }
 
     .contact-right .form-segment input{
-        width: 45vw
+        width: 45vw;
+        border-radius: 0;
     }
 
 /* FAQ section */
@@ -458,6 +459,7 @@
         font-size: 1.6vw;
         font-weight: 400;
         padding: 0.3vw 0.5vw;
+        border-radius: 0;
     }
         input:focus {
             outline: none;
@@ -466,6 +468,7 @@
             background-color: #fff;
             font-size: 1.6vw;
             font-weight: 400;
+            border-radius: 0;
         }
 
     .button-segment{
