@@ -17,10 +17,21 @@ accordionItems.forEach((item) => {
 
     // Toggle the current section
     accordContent.classList.toggle("active");
+    
+    // Fade in the accord-img if the section is now active
+    if (accordContent.classList.contains("active")) {
+      gsap.from(accordContent, {
+        delay: .2,
+        opacity: 0,
+        duration: 0.6,
+        ease: "sine.in",
+      });
+    }
     const newSrc = accordContent.classList.contains("active")
-      ? "images/remove_icon.svg"
+      ? "images/remove-icon.svg"
       : "images/expand_icon.svg";
     expandIcon.src = newSrc;
+
 
     // Update the open section
     openSection = accordContent.classList.contains("active")
@@ -28,43 +39,6 @@ accordionItems.forEach((item) => {
       : null;
   });
 });
-
-//image fade in effect
-const fadeObjects = document.querySelectorAll(".portfolio-img");
-
-function debounce(func, wait = 20, immediate = true) {
-  let timeout;
-  return function () {
-    const context = this,
-      args = arguments;
-    const later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    const callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-}
-
-function checkSlide() {
-  fadeObjects.forEach((image) => {
-    const slideInAt = window.scrollY + window.innerHeight;
-    const imageTop = image.offsetTop;
-    const isTopShown = slideInAt > imageTop;
-    const isNotScrolledPast = window.scrollY < imageTop;
-
-    const hasFadedIn = image.classList.contains("fade-in");
-
-    if (isTopShown && isNotScrolledPast && !hasFadedIn) {
-      image.style.opacity = 0.85;
-      image.classList.add("fade-in");
-    }
-  });
-}
-
-document.addEventListener("scroll", debounce(checkSlide));
 
 //handle about section nav
 const aboutCopy = document.querySelector(".about-copy");
@@ -158,10 +132,6 @@ scrollLinks.forEach((link) => {
 //on link-click show gallery images as well as use smooth scroll
 scrollLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    fadeObjects.forEach((image) => {
-      image.style.opacity = 0.85;
-      image.classList.add("fade-in");
-    });
     smoothScroll(e);
   });
 });
@@ -226,7 +196,7 @@ const mobileMenuLinks = document.querySelectorAll(".mobile-menu-item");
 
 mobileIcon.addEventListener("click", () => {
   if (mobileIcon.src.includes("images/menu-icon.svg")) {
-    mobileIcon.src = "images/close-icon.svg";
+    mobileIcon.src = "images/close_icon.svg";
     mobileMenuModal.classList.add("appear");
   } else {
     mobileIcon.src = "images/menu-icon.svg";
@@ -245,3 +215,124 @@ mobileMenuLinks.forEach((link) => {
     }
   });
 });
+
+
+//GSAP ANIMATION PLAY
+
+window.addEventListener("DOMContentLoaded", () => {
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  const splitText = new SplitType('#split-text');
+  const tl = gsap.timeline();
+  const leafTop = document.getElementById("leafs-top")
+  const leafBottom = document.getElementById("leafs-bottom")
+
+  tl.from('.char', {
+    delay: 0.2,
+    opacity: 0,
+    duration: 0.6, 
+    ease: "sine.in", 
+    stagger: { amount: 0.6 }
+  });
+
+  tl.from(leafTop, {
+    delay: 1.4,
+    opacity: 0,
+    duration: 0.5,
+    ease: "sine.in",
+  }, 0);
+  tl.from(leafTop, {
+    delay: 1.5,
+    y: 500,
+    duration: 0.5,
+    ease: "back.out(3)", 
+  }, 0); 
+  tl.from(leafBottom, {
+    delay: 1.2,
+    opacity: 0,
+    duration: 0.5,
+    ease: "sine.in",
+  }, 0);
+  tl.from(leafBottom, {
+    delay: 1.3,
+    y: 1000,
+    duration: 0.5,
+    ease: "back.out(4)", 
+  }, 0); 
+
+  gsap.utils.toArray('.text-appear').forEach((element) => {
+    gsap.from(element, {
+      opacity: 0,
+      duration: 1,
+      ease: "sine.in",
+      scrollTrigger: {
+        trigger: element,
+        toggleActions: "restart none none none",
+      }
+    });
+  });
+
+  gsap.utils.toArray('.portfolio-img').forEach((element) => {
+    gsap.from(element, {
+      opacity: 0,
+      duration: 1,
+      ease: "sine.in",
+      scrollTrigger: {
+        trigger: element,
+        toggleActions: "restart none none none",
+      }
+    });
+  });
+
+  function footerAnimation() { 
+  const tlFoot = gsap.timeline();
+
+  tlFoot.from('.logo-letter-foot', {
+    delay: 0.2,
+    opacity: 0,
+    duration: 0.4, 
+    ease: "sine.in", 
+    stagger: { amount: 0.4 }
+  });
+
+  tlFoot.from('#leafs-top-foot', {
+    delay: 0.9,
+    opacity: 0,
+    duration: 0.4,
+    ease: "sine.in",
+  }, 0);
+  tlFoot.from('#leafs-top-foot', {
+    delay: 1,
+    y: 500,
+    duration: 0.5,
+    ease: "back.out(3)", 
+  }, 0); 
+  tlFoot.from('#leafs-bottom-foot', {
+    delay: 0.9,
+    opacity: 0,
+    duration: 0.4,
+    ease: "sine.in",
+  }, 0);
+  tlFoot.from('#leafs-bottom-foot', {
+    delay: 0.8,
+    y: 1000,
+    duration: 0.5,
+    ease: "back.out(4)", 
+  }, 0); 
+}
+
+  gsap.to('.logo-foot', {
+    scrollTrigger: {
+      trigger: '.logo-foot',
+      toggleActions: 'restart none none none',
+      onEnter: () => footerAnimation(),
+    },
+  });
+
+  
+  
+  
+
+
+})

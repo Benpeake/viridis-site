@@ -7,9 +7,9 @@
 
     :root {
     --forest: #15241C;
-    --green: #2B9F65;
-    --white: #D6D5C9;
-    --red: #A22C29;
+    --green: #BEEF9E;
+    --white: #FCEFF9;
+    --red: #9D8DF1;
     }
 
     body{
@@ -17,6 +17,13 @@
     margin: 0;
     padding: 0;
     }
+
+    #split-text {
+    font-kerning: none;
+    width: 34.5vw;
+    }
+
+    svg{overflow: visible;}
 
 /* General */
     a{
@@ -124,20 +131,27 @@
         font-weight: 600;
     }
         .contact-btn:hover{
-            color: var(--white);
+            color: var(--green);
             background-color: var(--forest);
             cursor: pointer;
         }
-
-    .logo{
-        font-family: 'Crimson Pro', serif;
-        font-weight: 600;
-        font-size: 2.4vw;
-    }
+        .contact-link:hover{
+            color: var(--green);
+        }
 
     nav a:hover{
         color: var(--white);
         cursor: pointer;
+    }
+
+    .logo{
+        height: 1.7vw;
+        width: auto;
+    }
+
+    .logo-foot{
+        height: 3.4vw;
+        width: auto;
     }
 
 /* Landing section */
@@ -161,7 +175,9 @@
         justify-content: center;
         align-items: center;
         padding: 0 6vw;
+        color: var(--green);
     }
+
 
 /* Services section */
     .services-section{
@@ -172,8 +188,8 @@
     }
 
     .services-left{
-       
     }
+
 
 /* Gallery secttion */
     .gallery-section{
@@ -190,9 +206,8 @@
         display: block; 
         object-fit: cover;
         border-radius: 0.5vw;
-        opacity: 0;
+        opacity: 0.9;
         clip-path: inset(2px 2px 2px 2px); 
-        transition: opacity 1.6s ease-out;
         border-radius: 0.8vw;
     }
 
@@ -336,7 +351,7 @@
     
     .accordion-container h2{
         padding-bottom: 3vw;
-    }
+    } 
     
 /* Footer section */
     footer{
@@ -387,12 +402,12 @@
     }
 
     .accordion-item{
-        border-top: solid 0.3vw;
-        border-bottom: solid 0.3vw;
+        border-top: solid 0.26vw;
+        border-bottom: solid 0.26vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: -0.15vw 0;
+        margin: -0.13vw 0;
         padding: 1em 0;
     }
 
@@ -400,11 +415,13 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.8s ease-out;
+        transform: translateZ(0);
     }
 
     .active {
-        max-height: 100vh; 
+        max-height: 100vw; 
         transition: max-height 0.8s ease-in;
+
     }
 
     .accordion-content p{
@@ -624,6 +641,11 @@
 
 /* responsive styles */
   @media screen and (max-width: 1000px){
+
+    #split-text {
+        width: 345px;
+        }
+
     form {
         display: flex;
         flex-direction: column;
@@ -669,7 +691,7 @@
     }
      
     .logo{
-        font-size: 26px;
+        height: 17px;
         padding-left: 4px;
     }
     
@@ -712,9 +734,9 @@
     }
     
     .accordion-item{
-        border-top: solid 3px;
-        border-bottom: solid 3px;
-        margin: -1.5px 0;
+        border-top: solid 2.6px;
+        border-bottom: solid 2.6px;
+        margin: -1.3px 0;
         padding: 12px 0;
     }
 
@@ -828,6 +850,11 @@
   }
 
   @media screen and (max-width: 750px){
+
+    #split-text {
+        width: 275px;
+        }
+
     .gallery-section{
         grid-template-columns: 1fr 1fr;
         padding: 8vw 3vw;
@@ -909,6 +936,11 @@
   }
 
   @media screen and (max-width: 600px){
+
+    #split-text {
+        width: 240px;
+        }
+
     h1{
         font-size: 30px;
     }
@@ -937,7 +969,9 @@
     }
 
     .la-right{
-        padding: 8vw 6vw;
+        padding: 8vw 4vw;
+        justify-content: center;
+        align-items: center;
     }
 
     .landing-section h1{
@@ -964,6 +998,10 @@
       .button-container{
         width: 65vw;
     }
+
+    #split-text {
+        width: 475px;
+        }
     
 
   }
@@ -1048,4 +1086,47 @@
     .button-container{
         width: 94vw;
     }
+
+    #split-text {
+        width: 350px;
+        }
   }
+
+
+
+  @media screen and (min-width: 1600px){
+    h1{
+        font-size: 70.4px;
+    }
+
+    h2{
+        font-size: 54.4px;
+    }
+    h3{
+        font-size: 35.1px;
+    }
+
+    p{
+        font-size: 25.6px
+    }
+    .logo{
+        height: 27.1px
+    }
+
+    #split-text {
+        font-kerning: none;
+        width: 560px;
+        }
+        
+    .accordion-item{
+        border-top: solid 4px;
+        border-bottom: solid 4px;
+        margin: -2px 0;
+    }
+
+    
+  }
+
+
+  /* GSAP TEST */
+
