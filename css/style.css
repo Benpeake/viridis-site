@@ -19,8 +19,11 @@
     }
 
     #split-text {
-    font-kerning: none;
-    width: 34.5vw;
+    width: 35vw;
+    }
+
+    .same-line{
+        white-space: nowrap;
     }
 
     svg{overflow: visible;}
@@ -643,7 +646,7 @@
   @media screen and (max-width: 1000px){
 
     #split-text {
-        width: 345px;
+        width: 350px;
         }
 
     form {
