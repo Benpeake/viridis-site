@@ -72,7 +72,7 @@
     }
 
     p{
-        font-size: 1.6vw;
+        font-size: 1.4vw;
         font-weight: 300;
     }
         .green p{
@@ -148,7 +148,7 @@
     }
 
     .logo{
-        height: 1.7vw;
+        height: 1.6vw;
         width: auto;
     }
 
@@ -370,8 +370,11 @@
         gap: 1.5vw;
     }
 
-    .smaller-icon{
-        width: 3.1vw;
+    .social-icon{
+        width: 2.4vw;
+    }
+    .social-icon.smaller-icon{
+        width: 2.3vw;
     }
 
     .footer-right{
@@ -423,8 +426,7 @@
 
     .active {
         max-height: 100vw; 
-        transition: max-height 0.8s ease-in;
-
+        transition: max-height 0.6s ease-in;
     }
 
     .accordion-content p{
@@ -711,7 +713,7 @@
     }
     
     p{
-        font-size: 16px;
+        font-size: 14px;
     }
     
     label {
@@ -755,6 +757,12 @@
     .expand-icon{
         width: 32px;
     }
+    .social-icon{
+        width: 24px;
+    }
+    .social-icon.smaller-icon{
+        width: 22px;
+    }
 
     .about-nav{
         margin: 0;
@@ -794,6 +802,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
+        align-content: center;
         gap: 15px;
     }
     
@@ -848,6 +858,11 @@
         display: block; 
         margin: auto; 
         padding-bottom: 28px;
+    }
+
+    .active {
+        max-height:200vw; 
+        transition: max-height 0.6s ease-in;
     }
     
   }

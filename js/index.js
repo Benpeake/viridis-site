@@ -23,7 +23,7 @@ accordionItems.forEach((item) => {
       gsap.from(accordContent, {
         delay: .2,
         opacity: 0,
-        duration: 0.6,
+        duration: 0.4,
         ease: "sine.in",
       });
     }
@@ -53,7 +53,7 @@ jemmaLink.addEventListener("click", function () {
   teamLink.classList.remove("active-section-link");
 
   // Fade out existing content
-  gsap.to([aboutCopy, aboutCopyP2, aboutImg], { opacity: 0, duration: 0.6, ease: "sine.out", onComplete: updateContentJemma });
+  gsap.to([aboutCopy, aboutCopyP2, aboutImg], { opacity: 0, duration: 0.2, ease: "sine.out", onComplete: updateContentJemma });
 });
 
 teamLink.addEventListener("click", function () {
@@ -62,7 +62,7 @@ teamLink.addEventListener("click", function () {
   teamLink.classList.add("active-section-link");
 
   // Fade out existing content
-  gsap.to([aboutCopy, aboutCopyP2, aboutImg], { opacity: 0, duration: 0.6, ease: "sine.out", onComplete: updateContentTeam });
+  gsap.to([aboutCopy, aboutCopyP2, aboutImg], { opacity: 0, duration: 0.2, ease: "sine.out", onComplete: updateContentTeam });
 });
 
 function updateContentJemma() {
@@ -74,7 +74,7 @@ function updateContentJemma() {
   aboutImg.alt = "jemma in garden";
 
   // Fade in new content
-  gsap.to([aboutCopy, aboutCopyP2, aboutImg], { opacity: 1, duration: 0.6, ease: "sine.in" });
+  gsap.to([aboutCopy, aboutCopyP2, aboutImg], { opacity: 1, duration: 0.2, ease: "sine.in" });
 }
 
 function updateContentTeam() {
@@ -87,7 +87,7 @@ function updateContentTeam() {
   aboutImg.alt = "multiple gardeners gloves";
 
   // Fade in new content
-  gsap.to([aboutCopy, aboutCopyP2, aboutImg], { opacity: 1, duration: 0.6, ease: "sine.in" });
+  gsap.to([aboutCopy, aboutCopyP2, aboutImg], { opacity: 1, duration: 0.2, ease: "sine.in" });
 }
 
 //cost calculator logic
@@ -294,11 +294,13 @@ window.addEventListener("DOMContentLoaded", () => {
   gsap.utils.toArray('.text-appear').forEach((element) => {
     gsap.from(element, {
       opacity: 0,
-      duration: 1,
+      duration: 0.8,
+      delay: 0.1,
       ease: "sine.in",
       scrollTrigger: {
         trigger: element,
-        toggleActions: "restart none none none",
+        start: "top 90%",
+        toggleActions: "play none none none",
       }
     });
   });
@@ -306,11 +308,13 @@ window.addEventListener("DOMContentLoaded", () => {
   gsap.utils.toArray('.portfolio-img').forEach((element) => {
     gsap.from(element, {
       opacity: 0,
-      duration: 1,
+      duration: 0.8,
+      delay: 0.1,
       ease: "sine.in",
       scrollTrigger: {
         trigger: element,
-        toggleActions: "restart none none none",
+        toggleActions: "play none none none",
+        start: "top 90%",
       }
     });
   });
@@ -355,7 +359,7 @@ window.addEventListener("DOMContentLoaded", () => {
   gsap.from('.logo-foot', {
     scrollTrigger: {
       trigger: '.logo-foot',
-      toggleActions: 'restart none none none',
+      toggleActions: 'play none none none',
       onEnter: () => footerAnimation(),
     },
   });
