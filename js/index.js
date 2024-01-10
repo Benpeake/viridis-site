@@ -98,9 +98,6 @@ function updateContentJemma() {
 }
 
 
-
-
-
 function updateContentTeam() {
   // Update content
   aboutCopy.textContent =
@@ -120,30 +117,32 @@ function quoteCalc(length, width) {
   return roundedNum.toLocaleString();
 }
 
-document.getElementById("quoteForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    
-    const quoteResult = document.getElementById("quote-result");
-    let length = document.getElementById("length").value;
-    let width = document.getElementById("width").value;
-    let estimate = quoteCalc(length, width);
-    quoteResult.textContent = "£" + estimate;
+document.getElementById("quoteForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  
+  let quoteResult = document.getElementById("quote-result");
+  let length = document.getElementById("length").value;
+  let width = document.getElementById("width").value;
+  let estimate = "£" + quoteCalc(length, width);
 
-    // Split the text using SplitType
-    const splitTextResult = new SplitType(quoteResult, { types: 'words, chars' });
+  gsap.killTweensOf(quoteResult);
 
-    // GSAP animation on each character
-    gsap.from(splitTextResult.chars, {
-      delay: 0.2,
-      opacity: 0,
-      duration: 0.6,
-      ease: "sine.in",
-      stagger: { amount: 0.1 }
-    });
+  quoteResult.textContent = ""; // Clear previous content
+  estimate.split("").forEach((char) => {
+    let span = document.createElement("span");
+    span.textContent = char;
+    quoteResult.appendChild(span);
   });
 
-
+  // GSAP animation on each character
+  gsap.from(quoteResult.childNodes, {
+    delay: 0.2,
+    opacity: 0,
+    duration: 0.6,
+    ease: "sine.in",
+    stagger: { amount: 0.1 }
+  });
+});
 
 
 // Scroll link logic
@@ -243,34 +242,6 @@ document.querySelector(".quote-submit").addEventListener("click", function () {
     widthRequired.classList.remove("error");
   }
 });
-
-//handle mobile menu
-const mobileIcon = document.querySelector(".mobile-icon");
-const mobileMenuModal = document.querySelector(".mobile-menu-modal");
-const mobileMenuLinks = document.querySelectorAll(".mobile-menu-item");
-
-mobileIcon.addEventListener("click", () => {
-  if (mobileIcon.src.includes("images/menu-icon.svg")) {
-    mobileIcon.src = "images/close_icon.svg";
-    mobileMenuModal.classList.add("appear");
-  } else {
-    mobileIcon.src = "images/menu-icon.svg";
-    mobileMenuModal.classList.remove("appear");
-  }
-});
-
-mobileMenuLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    if (mobileIcon.src.includes("images/menu-icon.svg")) {
-      mobileIcon.src = "images/close-icon.svg";
-      mobileMenuModal.classList.add("appear");
-    } else {
-      mobileIcon.src = "images/menu-icon.svg";
-      mobileMenuModal.classList.remove("appear");
-    }
-  });
-});
-
 
 //GSAP ANIMATION PLAY
 
@@ -398,3 +369,72 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 })
+
+//handle mobile menu
+const mobileIcon = document.querySelector(".mobile-icon");
+const mobileMenuModal = document.querySelector(".mobile-menu-modal");
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu-item");
+const tlMobMen = gsap.timeline({ paused: true });
+
+mobileIcon.addEventListener("click", () => {
+  if (!mobileMenuModal.classList.contains("appear")) {
+    mobileMenuModal.classList.add("appear");
+    tlMobMen.play()
+  } else {
+    mobileMenuModal.classList.remove("appear");
+    tlMobMen.reverse()
+  }
+});
+
+
+mobileMenuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (!mobileMenuModal.classList.contains("appear")) {
+      mobileIcon.src = "images/close-icon.svg";
+      mobileMenuModal.classList.add("appear");
+    } else {
+      mobileIcon.src = "images/menu-icon.svg";
+      mobileMenuModal.classList.remove("appear");
+    }
+  });
+});
+
+
+  const topL = document.getElementById("top");
+  const midL = document.getElementById("mid");
+  const botL = document.getElementById("bot");
+
+  tlMobMen.to(midL, {
+    opacity: 0,
+    duration: 0.3,
+    ease: "sine.in",
+  }, 0);
+
+  tlMobMen.to([botL], {
+    y: -25,
+    duration: 0.3,
+    ease: "sine.in",
+  }, "-=0.3");
+  tlMobMen.to([topL], {
+    y: 25,
+    duration: 0.3,
+    ease: "sine.in",
+  }, "-=0.3");
+
+  tlMobMen.to(topL, {
+    rotation: 45,
+    transformOrigin: "50% 50%",
+    duration: 0.3,
+    ease: "power.in(4)",
+  });
+
+  tlMobMen.to(botL, {
+    rotation: -45,
+    transformOrigin: "50% 50%",
+    duration: 0.3,
+    ease: "power.in(4)",
+  }, "-=0.3");
+
+  
+
+
