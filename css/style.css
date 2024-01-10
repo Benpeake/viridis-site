@@ -22,6 +22,11 @@
     width: 35vw;
     }
 
+    /* #quote-result {
+        width: 5vw;
+        white-space: nowrap;
+    } */
+
     .same-line{
         white-space: nowrap;
     }
@@ -51,6 +56,10 @@
 
     .bold{
         font-weight: 600;
+    }
+
+    .small-print{
+        font-weight: 3;
     }
 
     h1{
@@ -87,10 +96,10 @@
     }
 
     .required{
-        color: var(--white);
+        color: var(--red);
     }
     .contact-section .required{
-        color: var(--green);
+        color: var(--red);
     }
 
     .underline{
@@ -148,7 +157,7 @@
     }
 
     .logo{
-        height: 1.6vw;
+        height: 1.8vw;
         width: auto;
     }
 
@@ -208,10 +217,8 @@
         height: auto; 
         display: block; 
         object-fit: cover;
-        border-radius: 0.5vw;
         opacity: 0.9;
         clip-path: inset(2px 2px 2px 2px); 
-        border-radius: 0.8vw;
     }
 
 /* About section */
@@ -310,7 +317,7 @@
 
     .estimate-result h3{
         font-weight: 600;
-        padding: 2vw 0;
+        padding: 1.5vw 0;
     }
 
     .estimate-result{
@@ -331,7 +338,7 @@
     }
 
     .contact-right .form-segment input{
-        width: 45vw;
+        width: 47vw;
         border-radius: 0;
     }
 
@@ -420,7 +427,7 @@
     .accordion-content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.8s ease-out;
+        transition: max-height 0.6s ease-out;
         transform: translateZ(0);
     }
 
@@ -477,8 +484,8 @@
 
     input{
         background-color:  #fff;
-        border: none;
-        font-size: 1.6vw;
+        border: solid 0.09vw var(--forest);
+        font-size: 1.4vw;
         font-weight: 400;
         padding: 0.3vw 0.5vw;
         border-radius: 0;
@@ -488,7 +495,7 @@
         }
         .contact-right input{
             background-color: #fff;
-            font-size: 1.6vw;
+            font-size: 1.4vw;
             font-weight: 400;
             border-radius: 0;
         }
@@ -533,7 +540,7 @@
     }
 
     .contact-section label {
-        font-size: 1.8vw;
+        font-size: 1.4vw;
         font-weight: 500;
         margin: 0;
         padding: 0;
@@ -548,7 +555,7 @@
         .button-container{
             display: flex;
             flex-direction: row;
-            width: 45vw;
+            width: 47vw;
             gap: 1.5vw;
         }
 
@@ -559,7 +566,7 @@
         -moz-appearance: none;
         width: 1vw;
         height: 1vw;
-        border: none;
+        border: solid 0.09vw var(--forest);
         border-radius: 50%;
         background-color: #fff;
     }
@@ -569,21 +576,23 @@
         }
 
     .radio-label{
-        font-size: 1.6vw ;
+        font-size: 1.4vw ;
         opacity: 0.6;
+        font-weight: 400;
     }
 
     textarea{
-        width: 45vw;
+        width: 47vw;
         background-color: #fff;
         border: none;
         font-size: 1.6vw;
         font-weight: 400;
         padding: 0.3vw 0.5vw;
         resize: vertical; 
-        max-width: 45vw;
+        max-width: 47vw;
         margin-top: 0.3vw;
         border-radius: 0;
+        border: solid 0.09vw var(--forest);
     }
         textarea:focus{
             outline: none;
@@ -654,15 +663,23 @@
     form {
         display: flex;
         flex-direction: column;
-        gap: 1.5vw;
-        padding-top: 1vw;
+        gap: 15px;
+        padding-top: 10px;
     
     }
-    
+
+    .radio-label{
+        font-size: 14px
+      }
+
+      .contact-section label {
+        font-size: 14px;
+    }
     
     input{
-        font-size: 16px;
-        padding: 0.3vw 0.5vw;
+        font-size: 14px;
+        padding: 3px 5px;
+        border: solid 0.9px var(--forest);
     }
 
     input[type="radio"],
@@ -672,13 +689,13 @@
         -moz-appearance: none;
         width: 10px;
         height: 10px;
-        border: none;
+        border: solid 0.9px var(--forest);
         border-radius: 50%;
         background-color: #fff;
     }
 
     .contact-right .form-segment input{
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .underline{
@@ -696,7 +713,7 @@
     }
      
     .logo{
-        height: 17px;
+        height: 18px;
         padding-left: 4px;
     }
     
@@ -802,13 +819,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-        align-content: center;
         gap: 15px;
-    }
-    
-    .smaller-icon{
-        width: 31px;
     }
     
     .footer-right h2{
@@ -818,9 +829,10 @@
     }
 
     textarea{
-        font-size: 16px;
+        font-size: 14px;
         padding: 3px 5px;
         margin-top: 2px;
+        border: solid 0.9px var(--forest);
     }
     
 
@@ -900,16 +912,16 @@
     }
 
     .contact-right .form-segment input{
-        width: 70vw;
+        width: 74vw;
     }
 
     textarea{
-        width: 70vw;
-        max-width: 70vw;
+        width: 74vw;
+        max-width: 74vw;
       }
 
       .button-container{
-        width: 70vw;
+        width: 74vw;
     }
     
     .cost-calculator{
@@ -939,7 +951,7 @@
     }
 
     .contact-section label{
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 500;
     }
 
@@ -1005,16 +1017,16 @@
         padding: 0 3vw 8vw 3vw;
     }
     .contact-right .form-segment input{
-        width: 65vw;
+        width: 70vw;
     }
 
     textarea{
-        width: 65vw;
-        max-width: 65vw;
+        width: 70vw;
+        max-width: 70vw;
       }
 
       .button-container{
-        width: 65vw;
+        width: 70vw;
     }
 
     #split-text {
