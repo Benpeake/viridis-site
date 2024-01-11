@@ -965,7 +965,7 @@ input[type="number"] {
     }
 
     .mobile-icon{
-        height: 35px;
+        height: 26px;
         width: auto;
         z-index: 2; 
     }
@@ -990,6 +990,10 @@ input[type="number"] {
   }
 
   @media screen and (max-width: 600px){
+
+    .nav-left{
+        padding-top: 6px;
+    }
 
     #split-text {
         width: 240px;
@@ -1017,6 +1021,7 @@ input[type="number"] {
     .button-container{
         padding-bottom: 1.2vw;
     }
+
 
   }
 
