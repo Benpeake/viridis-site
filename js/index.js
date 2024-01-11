@@ -160,7 +160,7 @@ function smoothScroll(e) {
   }
 
   const targetPosition = targetSection.offsetTop;
-  const offset = 85; // Adjust the offset as needed
+  const offset = 80; // Adjust the offset as needed
   const targetPositionWithOffset = targetPosition - offset;
   const startPosition = window.scrollY;
   const distance = targetPositionWithOffset - startPosition;
@@ -244,7 +244,6 @@ document.querySelector(".quote-submit").addEventListener("click", function () {
 });
 
 //GSAP ANIMATION PLAY
-
 window.addEventListener("DOMContentLoaded", () => {
 
   const splitText = new SplitType('#split-text');
@@ -259,14 +258,6 @@ window.addEventListener("DOMContentLoaded", () => {
     ease: "sine.in", 
     stagger: { amount: 0.6 }
   });
-
-  // tl.from('.logo-letter', {
-  //   delay: 0.2,
-  //   opacity: 0,
-  //   duration: 0.4, 
-  //   ease: "sine.in", 
-  //   stagger: { amount: 0.4 }
-  // }, 0.4);
 
   tl.from(leafTop, {
     delay: 1.4,
@@ -375,30 +366,35 @@ const mobileIcon = document.querySelector(".mobile-icon");
 const mobileMenuModal = document.querySelector(".mobile-menu-modal");
 const mobileMenuLinks = document.querySelectorAll(".mobile-menu-item");
 const tlMobMen = gsap.timeline({ paused: true });
+const tlModelApear = gsap.timeline({ paused: true });
 
 mobileIcon.addEventListener("click", () => {
   if (!mobileMenuModal.classList.contains("appear")) {
     mobileMenuModal.classList.add("appear");
     tlMobMen.play()
+    tlModelApear.play()
   } else {
-    mobileMenuModal.classList.remove("appear");
+    tlModelApear.reverse()
     tlMobMen.reverse()
+    setTimeout(() =>{
+      mobileMenuModal.classList.remove("appear");
+    }, 500)
   }
 });
-
 
 mobileMenuLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (!mobileMenuModal.classList.contains("appear")) {
-      mobileIcon.src = "images/close-icon.svg";
       mobileMenuModal.classList.add("appear");
     } else {
-      mobileIcon.src = "images/menu-icon.svg";
-      mobileMenuModal.classList.remove("appear");
+      tlMobMen.reverse();
+      tlModelApear.reverse();
+      setTimeout(() =>{
+        mobileMenuModal.classList.remove("appear");
+      }, 500)
     }
   });
 });
-
 
   const topL = document.getElementById("top");
   const midL = document.getElementById("mid");
@@ -435,6 +431,14 @@ mobileMenuLinks.forEach((link) => {
     ease: "power.in(4)",
   }, "-=0.3");
 
-  
-
-
+  tlModelApear.fromTo(
+    mobileMenuModal,
+    {
+      y: "-100%", // Start from above the screen
+    },
+    {
+      y: "0%", // End at the top of the screen
+      duration: 0.5,
+      ease: "power.out(3)",
+    }
+  );

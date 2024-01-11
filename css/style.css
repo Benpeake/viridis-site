@@ -407,7 +407,7 @@ input[type="number"] {
         align-items: center;
     }
 
-    .footer-right h2{
+    /* .footer-right h2{
         font-size: 6vw;
         font-weight: 700;
         font-family: 'Crimson Pro', serif;
@@ -416,7 +416,7 @@ input[type="number"] {
         text-decoration: underline;
         text-underline-offset: 0.6vw;
         text-decoration-thickness: 0.8vw;
-    }
+    } */
 
 /* Accordion */
     .accordion-container{
@@ -676,6 +676,12 @@ input[type="number"] {
         width: 350px;
         }
 
+    .logo-foot{
+        height: 34px;
+        width: auto;
+        margin: 0 0 40px 0;
+    }
+
     form {
         display: flex;
         flex-direction: column;
@@ -839,11 +845,11 @@ input[type="number"] {
         gap: 15px;
     }
     
-    .footer-right h2{
+    /* .footer-right h2{
         font-size: 60px;
         text-underline-offset: 6px;
         text-decoration-thickness: 8px;
-    }
+    } */
 
     textarea{
         font-size: 14px;
