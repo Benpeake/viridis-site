@@ -1,45 +1,62 @@
-gsap.registerPlugin(ScrollTrigger)
-// accordion logic
+// Accordion logic
 const accordionItems = document.querySelectorAll(".accordion-section");
 let openSection = null;
 
 accordionItems.forEach((item) => {
-  const expandIcon = item.querySelector(".expand-icon");
+  const expandIcon = item.querySelector(".accord-icon");
   const accordContent = item.querySelector(".accordion-content");
+  let tlAccordIcon = gsap.timeline({ paused: true });
+
+  tlAccordIcon.to(expandIcon, {
+    rotation: 180,
+    transformOrigin: "50% 50%",
+    duration: 0.3,
+    ease: "power.in(3)",
+  });
 
   expandIcon.addEventListener("click", function () {
     // Close the previously open section
     if (openSection && openSection !== accordContent) {
+      const prevExpandIcon = openSection.parentElement.querySelector(
+        ".accord-icon"
+      );
       openSection.classList.remove("active");
-      const prevExpandIcon =
-        openSection.parentElement.querySelector(".expand-icon");
-      prevExpandIcon.src = "images/expand_icon.svg";
+      const prevTlAccordIcon = prevExpandIcon.timeline;
+      prevTlAccordIcon.reverse(); 
     }
 
     // Toggle the current section
     accordContent.classList.toggle("active");
-    
+
     // Fade in the accord-img if the section is now active
     if (accordContent.classList.contains("active")) {
       gsap.from(accordContent, {
-        delay: .2,
+        delay: 0.2,
         opacity: 0,
         duration: 0.4,
         ease: "sine.in",
       });
+      tlAccordIcon.play(); 
+    } else {
+      tlAccordIcon.reverse();
     }
-    const newSrc = accordContent.classList.contains("active")
-      ? "images/remove-icon.svg"
-      : "images/expand_icon.svg";
-    expandIcon.src = newSrc;
 
+    const newSrc = accordContent.classList.contains("active")
+      ? "open-icon-src"
+      : "closed-icon-src";
+    expandIcon.src = newSrc;
 
     // Update the open section
     openSection = accordContent.classList.contains("active")
       ? accordContent
       : null;
   });
+
+  // Store the timeline in the expandIcon for later access
+  expandIcon.timeline = tlAccordIcon;
 });
+
+
 
 //handle about section nav
 const aboutCopy = document.querySelector(".about-copy");
