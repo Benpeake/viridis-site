@@ -30,7 +30,7 @@ input[type="number"] {
 
     .makeWhite{
         color: var(--white);
-
+        fill: var(--white) !important;
     }
 
     .makeNat{
@@ -71,6 +71,7 @@ input[type="number"] {
     }
     .accord-icon:hover{
         cursor: pointer;
+        fill: var(--white) ;
     }
 
     .same-line{
@@ -680,6 +681,7 @@ input[type="number"] {
             align-items: start;
             justify-content: space-between;
             gap: 2vw;
+            margin-top: 0.5vw;
         }
 
     .error{

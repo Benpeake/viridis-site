@@ -22,7 +22,8 @@ accordionItems.forEach((item) => {
       );
       openSection.classList.remove("active");
       const prevTlAccordIcon = prevExpandIcon.timeline;
-      prevTlAccordIcon.reverse(); 
+      prevTlAccordIcon.reverse();
+      prevExpandIcon.classList.remove("makeWhite"); // Remove class when closing
     }
 
     // Toggle the current section
@@ -36,14 +37,14 @@ accordionItems.forEach((item) => {
         duration: 0.4,
         ease: "sine.in",
       });
-      tlAccordIcon.play(); 
+      tlAccordIcon.play();
+      expandIcon.classList.add("makeWhite");
     } else {
       tlAccordIcon.reverse();
+      expandIcon.classList.remove("makeWhite");
     }
 
     const newSrc = accordContent.classList.contains("active")
-      ? "open-icon-src"
-      : "closed-icon-src";
     expandIcon.src = newSrc;
 
     // Update the open section
@@ -55,6 +56,7 @@ accordionItems.forEach((item) => {
   // Store the timeline in the expandIcon for later access
   expandIcon.timeline = tlAccordIcon;
 });
+
 
 
 
