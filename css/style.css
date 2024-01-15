@@ -22,10 +22,10 @@ input[type="number"] {
 
     :root {
     --forest: #1A2218;
-    --dgreen: #A8F288;
-    --green: #A8F288;
+    --dgreen: #BEEF9E;
+    --green: #BEEF9E;
     --white: #F7FAF0;
-    --natural: #E1F7B7;
+    --natural: #E8F9DC;
     }
 
     .makeWhite{
@@ -150,7 +150,7 @@ input[type="number"] {
     }
 
     .required{
-        color: var(--forest);
+        color: var(--green);
     }
     .contact-section .required{
         color: var(--red);
@@ -255,7 +255,7 @@ input[type="number"] {
     .services-section{
         display: grid;
         grid-template-columns:1fr 2fr;
-        padding: 8vw 3vw 4vw 3vw;
+        padding: 6vw 3vw 4vw 3vw;
         gap: 6vw;
     }
 
@@ -290,7 +290,7 @@ input[type="number"] {
     }
 
     .about-section-container{
-        padding: 4vw 3vw 8vw 3vw;
+        padding: 4vw 3vw 6vw 3vw;
     }
 
     .about-section img {
@@ -372,7 +372,6 @@ input[type="number"] {
         gap: 3vw;
         background-color: var(--forest);
         color: var(--natural);
-        border: solid .1vw var(--forest);
     }
 
     .cost-calculator-right{
@@ -399,9 +398,11 @@ input[type="number"] {
     .contact-section{
         display: grid;
         grid-template-columns:1fr 2fr;
-        padding: 8vw 3vw;
+        padding: 6vw 3vw;
         gap: 6vw;
-        background-color: var(--natural);
+        background-color: var(--forest);
+        color: var(--natural);
+        border-bottom: var(--green) solid .1vw;
     }
 
     .contact-right{
@@ -418,7 +419,7 @@ input[type="number"] {
     .faq-section{
         display: grid;
         grid-template-columns:2fr 1fr;
-        padding: 8vw 3vw;
+        padding: 6vw 3vw;
         gap: 6vw;
     }
 
@@ -598,17 +599,23 @@ input[type="number"] {
             cursor: pointer;
         }
 
-
-    .dark-button{
+    .dark-button {
+        border: 0.1vw solid var(--natural);
+        border-radius: 3.2vw; 
+        padding: 0.75vw 1.25vw; 
         background-color: var(--forest);
         color: var(--natural);
-        border-color: var(--forest);
+        font-weight: 600;
+        font-size: 1.3vw;
+        margin-top: 1vw;
     }
-        .dark-button:hover{
-            border-color: var(--forest);
+        .dark-button:hover {
             background-color: var(--natural);
             color: var(--forest);
+            border: 0.1vw solid var(--forest);
+            cursor: pointer;
         }
+
 
 
     label {
@@ -623,6 +630,7 @@ input[type="number"] {
         font-weight: 500;
         margin: 0;
         padding: 0;
+        color: var(--green);
     }
 
     .radio-button{
@@ -645,18 +653,18 @@ input[type="number"] {
         -moz-appearance: none;
         width: 1vw;
         height: 1vw;
-        border: solid 0.09vw var(--forest);
+        border: solid 0.09vw var(--natural);
         border-radius: 50%;
-        background-color: var(--natural);
+        background-color: var(--forest);
     }
         input[type="radio"]:checked,
         input[type="checkbox"]:checked {
-            background-color: var(--forest) 
+            background-color: var(--natural) 
         }
 
     .radio-label{
         font-size: 1.3vw ;
-        color: var(--forest);
+        color: var(--natural);
         font-weight: 400;
         opacity: 0.5;
     }
@@ -776,6 +784,7 @@ input[type="number"] {
 
       .contact-section label {
         font-size: 13px;
+        border-bottom: var(--green) solid 1px;
     }
     
     input{
