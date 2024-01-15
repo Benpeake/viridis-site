@@ -22,9 +22,9 @@ input[type="number"] {
 
     :root {
     --forest: #1A2218;
-    --dgreen: #B9EE96;
-    --green: #B9EE96;
-    --white: #FAF9EF;
+    --dgreen: #B3F09E;
+    --green: #B3F09E;
+    --white: #FAF7F0;
     --natural: #C7BFA9;
     }
 
@@ -208,7 +208,7 @@ input[type="number"] {
         }
 
     nav a:hover{
-        color: var(--green);
+        color: var(--white);
         cursor: pointer;
     }
 
@@ -668,7 +668,7 @@ input[type="number"] {
         max-width: 47vw;
         margin-top: 0.3vw;
         border-radius: 0;
-        border: solid 0.09vw var(--forest);
+        border: solid 0.1vw var(--forest);
         color: var(--forest);
     }
         textarea:focus{
@@ -771,7 +771,7 @@ input[type="number"] {
     input{
         font-size: 13px;
         padding: 3px 5px;
-        border: solid 0.9px var(--forest);
+        border: solid 1px var(--forest);
     }
 
     input[type="radio"],
@@ -930,7 +930,7 @@ input[type="number"] {
         font-size: 13px;
         padding: 3px 5px;
         margin-top: 2px;
-        border: solid 0.9px var(--forest);
+        border: solid 1px var(--forest);
     }
     
 
