@@ -389,7 +389,7 @@ input[type="number"] {
         gap: 3vw;
         background-color: var(--forest);
         color: var(--natural);
-        border: solid 0.1vw var(--dgreen);
+        /* border: solid 0.1vw var(--dgreen); */
     }
 
     .cost-calculator-right{
@@ -764,7 +764,7 @@ input[type="number"] {
         }
 
         .cost-calculator-left{
-            border: solid 1px var(--dgreen);
+            /* border: solid 1px var(--dgreen); */
         }
         .cost-calculator{
             border-top: solid 1px var(--dgreen);
