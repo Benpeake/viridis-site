@@ -221,7 +221,7 @@ input[type="number"] {
         }
 
     nav a:hover{
-        color: var(--natural);
+        color: var(--dgreen);
         cursor: pointer;
     }
 
