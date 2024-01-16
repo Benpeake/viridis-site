@@ -227,7 +227,7 @@ input[type="number"] {
     .logo{
         height: 1.8vw;
         width: auto;
-        fill: var(--dgreen);
+        fill: var(--green);
     }
 
     .logo-foot{
