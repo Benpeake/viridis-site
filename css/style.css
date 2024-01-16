@@ -23,7 +23,7 @@ input[type="number"] {
     :root {
     --forest: #1A2218;
     --dgreen: #BEEF9E;
-    --green: #BEEF9E;
+    --green: #E8F9DC;
     --white: #F7FAF0;
     --natural: #E8F9DC;
     }
@@ -60,19 +60,28 @@ input[type="number"] {
     }
 
     #quote-result {
-        color: var(--green);
+        color: var(--dgreen);
         font-weight: 600;
     }
 
     .accord-icon{
         width: 1.2vw;
         height: auto;
-        fill: var(--dgreen);
+        fill: var(--green);
         margin: 0 .5vw;
     }
     .accord-icon:hover{
         cursor: pointer;
-        fill: var(--natural) ;
+    }
+
+    .accord-iconDark{
+        width: 1.2vw;
+        height: auto;
+        fill: var(--forest);
+        margin: 0 .5vw;
+    }
+    .accord-iconDark:hover{
+        cursor: pointer;
     }
 
     .same-line{
@@ -131,6 +140,7 @@ input[type="number"] {
 
     .faq-title{
         margin-bottom: 50px;
+        font-weight: 700;
     }
 
     p{
@@ -142,7 +152,7 @@ input[type="number"] {
         }
     
     .central-title{
-        color: var(--green);
+        color: var(--dgreen);
         text-align: center;
         padding-top: 0;
         padding-bottom: 6vw;
@@ -150,10 +160,10 @@ input[type="number"] {
     }
 
     .required{
-        color: var(--green);
+        color: var(--dgreen);
     }
     .contact-section .required{
-        color: var(--red);
+        color: var(--dgreen);
     }
 
     .underline{
@@ -162,7 +172,7 @@ input[type="number"] {
         text-decoration-thickness: 0.1vw;
     }
     .underline:hover{
-        opacity: 0.9;
+        color: var(--dgreen);
     }
 
 /* Nav section */
@@ -172,7 +182,7 @@ input[type="number"] {
         width: 100%;
         z-index: 2; 
         padding: 1vw 3vw;
-        border-bottom: 0.1vw solid var(--green);
+        border-bottom: 0.1vw solid var(--dgreen);
     }
 
     .nav-container{
@@ -193,16 +203,16 @@ input[type="number"] {
     }
 
     .contact-btn{
-        border: 0.1vw solid var(--green);
+        border: 0.1vw solid var(--dgreen);
         border-radius: 3.2vw; 
         padding: 0.75vw 1.25vw; 
         background-color: var(--forest);
-        color: var(--green);
+        color: var(--dgreen);
         font-weight: 600;
     }
         .contact-btn:hover{
             color: var(--forest);
-            background-color: var(--green);
+            background-color: var(--dgreen);
             cursor: pointer;
         }
         .contact-link:hover{
@@ -217,13 +227,13 @@ input[type="number"] {
     .logo{
         height: 1.8vw;
         width: auto;
-        fill: var(--green);
+        fill: var(--dgreen);
     }
 
     .logo-foot{
         height: 3.4vw;
         width: auto;
-        fill: var(--forest);
+        fill: var(--dgreen);
     }
 
 /* Landing section */
@@ -421,13 +431,14 @@ input[type="number"] {
         grid-template-columns:2fr 1fr;
         padding: 6vw 3vw;
         gap: 6vw;
+        background-color: var(--natural);
     }
 
     .faq-img img{
         width: 100%;
         height: auto; 
         display: block; 
-        opacity: 0.8;
+        opacity: 0.9;
         object-fit: cover;
         clip-path: inset(2px 2px 2px 2px); 
     }
@@ -435,13 +446,18 @@ input[type="number"] {
     .accordion-container h2{
         padding-bottom: 3vw;
     } 
+
+    .accord-dark{
+        color: var(--forest);
+    }
     
 /* Footer section */
     footer{
         padding: 6vw 3vw;
         display: grid;
         grid-template-columns:2fr 1fr;
-        border-top: 0.1vw solid var(--green);
+        /* border-top: 0.1vw solid var(--green); */
+        background-color: var(--forest);
     }
 
     .social-icons{
@@ -453,10 +469,10 @@ input[type="number"] {
 
     .social-icon{
         width: 2.4vw;
-        fill: var(--forest);
+        fill: var(--natural);
     }
     .social-icon:hover{
-        opacity: 0.9;
+        fill: var(--dgreen);
     }
 
     .footer-right{
@@ -465,17 +481,6 @@ input[type="number"] {
         justify-content: center;
         align-items: center;
     }
-
-    /* .footer-right h2{
-        font-size: 6vw;
-        font-weight: 700;
-        font-family: 'Crimson Pro', serif;
-        margin: 0;
-        padding: 0;
-        text-decoration: underline;
-        text-underline-offset: 0.6vw;
-        text-decoration-thickness: 0.8vw;
-    } */
 
 /* Accordion */
     .accordion-container{
@@ -498,6 +503,12 @@ input[type="number"] {
         margin: -0.07vw 0;
         padding: 1.4em 0;
     }
+
+    .makeForest .accordion-item{
+        border-top: solid 0.14vw var(--forest);
+        border-bottom: solid 0.14vw var(--forest);
+    }
+
 
     .accordion-content {
         max-height: 0;
@@ -599,25 +610,6 @@ input[type="number"] {
             cursor: pointer;
         }
 
-    /* .dark-button {
-        border: 0.1vw solid var(--natural);
-        border-radius: 3.2vw; 
-        padding: 0.75vw 1.25vw; 
-        background-color: var(--forest);
-        color: var(--natural);
-        font-weight: 600;
-        font-size: 1.3vw;
-        margin-top: 1vw;
-    }
-        .dark-button:hover {
-            background-color: var(--natural);
-            color: var(--forest);
-            border: 0.1vw solid var(--forest);
-            cursor: pointer;
-        } */
-
-
-
     label {
         font-size: 2.1vw;
         font-weight: 500;
@@ -638,6 +630,7 @@ input[type="number"] {
         align-items: center;
         justify-content: space-between;
         gap: 2vw;
+        margin-top: 0.5vw;
     }
         .button-container{
             display: flex;
@@ -748,15 +741,15 @@ input[type="number"] {
         display: flex;
     }
 
+    .cost-calc-title{
+       font-weight: 700;
+    }
+
 /* responsive styles */
   @media screen and (max-width: 1000px){
 
     #split-text {
         width: 350px;
-        }
-
-        footer{
-            border-top: 1px solid var(--green);   
         }
 
         .accord-icon{
@@ -874,6 +867,13 @@ input[type="number"] {
         padding: 22px 0;
     }
 
+    .makeForest .accordion-item{
+        border-top: solid 1.5px var(--forest);
+        border-bottom: solid 1.5px var(--forest);
+        margin: -0.7px 0;
+        padding: 22px 0;
+    }
+
     .accordion-content.accordion-content-withimage{
         gap: 28px;
     }
@@ -937,12 +937,6 @@ input[type="number"] {
         align-items: center;
         gap: 15px;
     }
-    
-    /* .footer-right h2{
-        font-size: 60px;
-        text-underline-offset: 6px;
-        text-decoration-thickness: 8px;
-    } */
 
     textarea{
         font-size: 13px;
@@ -1028,6 +1022,7 @@ input[type="number"] {
         gap: 20px;
         justify-content: end;
         padding-bottom: 0;
+        padding-top: 60px;
     }
 
     .contact-section{
@@ -1059,15 +1054,6 @@ input[type="number"] {
         justify-self: center;
         padding: 30px 0;
     }
-
-    /* .cost-calculator-left{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 3vw;
-        background-color: var(--forest);
-        color: var(--white);
-    } */
 
     .cost-calc-title{
         width: 75vw;
@@ -1268,7 +1254,6 @@ input[type="number"] {
   }
 
 
-
   @media screen and (min-width: 1600px){
     h1{
         font-size: 70.4px;
@@ -1299,9 +1284,12 @@ input[type="number"] {
         margin: -0.75px;
     }
 
-    
+    .makeForest .accordion-item{
+        border-top: solid 1.7vw var(--forest);
+        border-bottom: solid 1.7vw var(--forest);
+        margin: -0.75px;
+    }
+
   }
 
-
-  /* GSAP TEST */
 
