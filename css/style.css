@@ -334,6 +334,10 @@ input[type="number"] {
         gap: 1.5vw;
     }
 
+    .about-copy{
+        margin-top: 4vw;
+    }
+
     .jemma-nav-link:hover{
         cursor: pointer;
         opacity: 1;
@@ -767,6 +771,10 @@ input[type="number"] {
     .logo-foot{
         height: 34px;
         width: auto;
+    }
+
+    .about-copy{
+        margin-top: 40px;
     }
 
     form {
