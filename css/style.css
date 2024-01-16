@@ -937,7 +937,7 @@ input[type="number"] {
     }
     
     .estimate-result{
-        border-bottom: solid 1px;
+        border-bottom: solid 1px var(--dgreen);
     }
 
     .estimate-result h3{
