@@ -26,6 +26,7 @@ input[type="number"] {
     --green: #E8F9DC;
     --white: #F7FAF0;
     --natural: #E8F9DC;
+    --olive: #DEE2B6;
     }
 
     .makeWhite{
@@ -375,8 +376,10 @@ input[type="number"] {
         grid-template-columns:1fr 1fr;
         padding: 6vw 3vw;
         gap: 6vw;
-        color: var(--forest);
-        background-color: var(--green);
+        color: var(--green);
+        background-color: var(--forest);
+        border-top: solid 0.1vw var(--dgreen);
+        border-bottom: solid 0.1vw var(--dgreen);
     }
 
     .cost-calculator-left{
@@ -386,7 +389,7 @@ input[type="number"] {
         gap: 3vw;
         background-color: var(--forest);
         color: var(--natural);
-        border: solid 0.15vw var(--dgreen);
+        border: solid 0.1vw var(--dgreen);
     }
 
     .cost-calculator-right{
@@ -409,6 +412,11 @@ input[type="number"] {
     .estimate-result{
         border-bottom: solid 0.1vw var(--dgreen);
     }
+
+    .cost-calc-title{
+        font-weight: 600;
+        color: var(--dgreen);
+     }
 
 /* Contact Section */
     .contact-section{
@@ -747,9 +755,6 @@ input[type="number"] {
         display: flex;
     }
 
-    .cost-calc-title{
-       font-weight: 700;
-    }
 
 /* responsive styles */
   @media screen and (max-width: 1000px){
@@ -759,7 +764,11 @@ input[type="number"] {
         }
 
         .cost-calculator-left{
-            border: solid 1.5px var(--dgreen);
+            border: solid 1px var(--dgreen);
+        }
+        .cost-calculator{
+            border-top: solid 1px var(--dgreen);
+            border-bottom: solid 1px var(--dgreen);
         }
 
         .accord-icon{
