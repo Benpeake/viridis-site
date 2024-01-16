@@ -68,7 +68,7 @@ input[type="number"] {
     .accord-icon{
         width: 1.2vw;
         height: auto;
-        fill: var(--green);
+        fill: var(--dgreen);
         margin: 0 .5vw;
     }
     .accord-icon:hover{
