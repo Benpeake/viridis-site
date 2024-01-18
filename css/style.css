@@ -1308,8 +1308,8 @@ input[type="number"] {
     }
 
     .makeForest .accordion-item{
-        border-top: solid 1.7vw var(--forest);
-        border-bottom: solid 1.7vw var(--forest);
+        border-top: solid 1.7px var(--forest);
+        border-bottom: solid 1.7px var(--forest);
         margin: -0.75px;
     }
 
