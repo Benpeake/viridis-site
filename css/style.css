@@ -120,7 +120,7 @@ input[type="number"] {
         color: var(--natural);
     }
 
-    h1{
+ h1{
         font-size: 4.4vw;
         font-weight: 600;
         margin: 0;
@@ -147,6 +147,7 @@ input[type="number"] {
     p{
         font-size: 1.3vw;
         font-weight: 400;
+        line-height: 1.4;
     }
         .green p{
             font-weight: 400;
@@ -249,17 +250,40 @@ input[type="number"] {
         display: block; 
         opacity: 0.9;
         object-fit: cover;
-        clip-path: inset(2px 2px 2px 2px); 
+        padding: 0;
+        margin: 0;
     }
 
-    .la-right{
+    .landing-right{
+        position: relative;
+        width: 100%;
+    }
+
+    .hero-text{
+        position: absolute;
+        top: 50%;
+        left: 52.5%;
+        transform: translate(-50%, -50%);
+        font-size: 4.4vw;
+        font-weight: 600;
+        margin: 0;
+        width: 80% !important;
+    }
+
+    .hero-img-2{
+        opacity: 20% !important;
+        object-fit: cover !important;
+    }
+
+
+    /* .la-right{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 0 6vw;
         color: var(--green);
-    }
+    } */
 
 
 /* Services section */
@@ -426,7 +450,7 @@ input[type="number"] {
         gap: 6vw;
         background-color: var(--forest);
         color: var(--natural);
-        border-bottom: var(--green) solid .1vw;
+        /* border-bottom: var(--green) solid .1vw; */
     }
 
     .contact-right{
@@ -759,6 +783,7 @@ input[type="number"] {
 /* responsive styles */
   @media screen and (max-width: 1000px){
 
+
     #split-text {
         width: 350px;
         }
@@ -844,6 +869,10 @@ input[type="number"] {
     }
     
     h1{
+        font-size: 44px;
+    }
+
+    .hero-text{
         font-size: 44px;
     }
     
@@ -1039,6 +1068,10 @@ input[type="number"] {
     h1{
         font-size: 34px;
     }
+    .hero-text{
+        font-size: 34px;
+    }
+    
 
     footer{
         grid-template-columns:1fr;
@@ -1124,6 +1157,10 @@ input[type="number"] {
     h1{
         font-size: 30px;
     }
+    .hero-text{
+        font-size: 30px;
+    }
+    
 
     h2{
         font-size: 30px;
@@ -1151,6 +1188,9 @@ input[type="number"] {
     .landing-section{
         grid-template-columns:1fr;
     }
+    .la-left{
+        order: 1;
+    }
 
     .la-right{
         padding: 8vw 4vw;
@@ -1168,7 +1208,7 @@ input[type="number"] {
 
     .services-section{
         grid-template-columns:1fr;
-        padding: 0 3vw 8vw 3vw;
+        padding: 16vw 3vw 8vw 3vw;
     }
     .contact-right .form-segment input{
         width: 70vw;
@@ -1186,6 +1226,11 @@ input[type="number"] {
     #split-text {
         width: 475px;
         }
+
+    .hero-text{
+        top: 45%;
+        left: 52.5%;
+    }
     
 
   }
@@ -1279,8 +1324,12 @@ input[type="number"] {
 
   @media screen and (min-width: 1600px){
     h1{
-        font-size: 70.4px;
+        font-size: 80.4px;
     }
+    .hero-text{
+        font-size: 80.4px;
+    }
+    
 
     h2{
         font-size: 54.4px;
