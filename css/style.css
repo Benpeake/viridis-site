@@ -91,6 +91,10 @@ input[type="number"] {
 
     svg{overflow: visible;}
 
+    h1, p, ul, li {
+        line-height: 1.3;
+      }
+
 /* General */
     a{
         text-decoration: none;
@@ -121,7 +125,7 @@ input[type="number"] {
     }
 
  h1{
-        font-size: 4.4vw;
+        font-size: 4.2vw;
         font-weight: 400;
         margin: 0;
     }
@@ -242,13 +246,16 @@ input[type="number"] {
     .landing-section{
         display: grid;
         grid-template-columns:1fr 1fr;
+        border-bottom: 0.1vw solid var(--dgreen);
+        border-top: 0.1vw solid var(--dgreen);
+        margin-top: -0.1vw;
     }
 
     .landing-section img {
         width: 100%;
         height: auto; 
         display: block; 
-        opacity: 0.8;
+        opacity: 0.9;
         object-fit: cover;
         padding: 0;
         margin: 0;
@@ -257,21 +264,32 @@ input[type="number"] {
     .landing-right{
         position: relative;
         width: 100%;
+        /* border-left: 0.1vw solid var(--dgreen); */
     }
 
     .hero-text{
         position: absolute;
         top: 50%;
-        left: 52.5%;
+        left: 54%;
         transform: translate(-50%, -50%);
-        font-size: 4.4vw;
+        font-size: 4.2vw;
         font-weight: 500;
         margin: 0;
+        padding-top:  1.5vw;
         width: 75% !important;
+        letter-spacing: .1vw;
     }
 
+    .hero-text::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 10%; /* Adjust the percentage as needed */
+        border-top: .5vw solid var(--dgreen) ;
+      }
+
     .hero-img-2{
-        opacity: 9% !important;
+        opacity: 12% !important;
         object-fit: cover !important;
     }
 
@@ -300,11 +318,12 @@ input[type="number"] {
 
 /* Gallery secttion */
     .gallery-section{
-        padding: 4vw 3vw;
+        padding: 4vw 1vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-evenly;
         gap: 1vw;
+        /* background-color: var(--green); */
     }
 
     .portfolio-img{
@@ -312,7 +331,7 @@ input[type="number"] {
         height: auto; 
         display: block; 
         object-fit: cover;
-        opacity: 0.8;
+        opacity: .9;
         clip-path: inset(2px 2px 2px 2px); 
     }
 
@@ -334,7 +353,6 @@ input[type="number"] {
         display: block; 
         opacity: 0.8;
         object-fit: cover;
-        clip-path: inset(2px 2px 2px 2px); 
     }
 
     .about-nav{
@@ -1189,6 +1207,9 @@ input[type="number"] {
   @media screen and (max-width: 525px){
     .landing-section{
         grid-template-columns:1fr;
+        border-bottom: 1px solid var(--dgreen);
+        border-top: 1px solid var(--dgreen);
+        margin-top: -1px;
     }
     .la-left{
         order: 1;
@@ -1324,14 +1345,14 @@ input[type="number"] {
   }
 
 
+  
   @media screen and (min-width: 1600px){
     h1{
-        font-size: 80.4px;
+        font-size: 67.1px;
     }
     .hero-text{
-        font-size: 80.4px;
+        font-size: 67.1px;
     }
-    
 
     h2{
         font-size: 54.4px;
