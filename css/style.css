@@ -95,6 +95,10 @@ input[type="number"] {
         line-height: 1.3;
       }
 
+      .dot{
+        padding-left: .3vw;
+      }
+
 /* General */
     a{
         text-decoration: none;
@@ -187,7 +191,7 @@ input[type="number"] {
         top: 0;
         width: 100%;
         z-index: 2; 
-        padding: 1vw 3vw;
+        padding: .6vw 3vw;
         border-bottom: 0.1vw solid var(--dgreen);
     }
 
@@ -269,22 +273,23 @@ input[type="number"] {
 
     .hero-text{
         position: absolute;
-        top: 50%;
+        top: 49%;
         left: 54%;
         transform: translate(-50%, -50%);
         font-size: 4.2vw;
         font-weight: 500;
         margin: 0;
-        padding-top:  1.5vw;
+        padding-top:  1.8vw;
         width: 75% !important;
         letter-spacing: .1vw;
+        line-height: 1.2;
     }
 
     .hero-text::before {
         content: "";
         position: absolute;
         top: 0;
-        width: 10%; /* Adjust the percentage as needed */
+        width: 7.5%; /* Adjust the percentage as needed */
         border-top: .5vw solid var(--dgreen) ;
       }
 
@@ -308,7 +313,7 @@ input[type="number"] {
     .services-section{
         display: grid;
         grid-template-columns:1fr 2fr;
-        padding: 6vw 3vw 4vw 3vw;
+        padding: 6vw 3vw 8vw 3vw;
         gap: 6vw;
     }
 
@@ -318,12 +323,12 @@ input[type="number"] {
 
 /* Gallery secttion */
     .gallery-section{
-        padding: 4vw 1vw;
+        padding: 1vw 1vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-evenly;
         gap: 1vw;
-        /* background-color: var(--green); */
+        background-color: var(--green);
     }
 
     .portfolio-img{
@@ -331,7 +336,7 @@ input[type="number"] {
         height: auto; 
         display: block; 
         object-fit: cover;
-        opacity: .9;
+        opacity: .95;
         clip-path: inset(2px 2px 2px 2px); 
     }
 
@@ -344,14 +349,14 @@ input[type="number"] {
     }
 
     .about-section-container{
-        padding: 4vw 3vw 6vw 3vw;
+        padding: 6vw 3vw 8vw 3vw;
     }
 
     .about-section img {
         width: 100%;
         height: auto; 
         display: block; 
-        opacity: 0.8;
+        opacity: 0.9;
         object-fit: cover;
     }
 
@@ -360,15 +365,13 @@ input[type="number"] {
         display: flex;
         flex-direction: row;
         gap: 6vw;
-        border-bottom: solid 0.1vw var(--green);
-        padding-bottom: 2vw;
+        border-bottom: solid 0.1vw var(--dgreen);
         color: var(--green);
     }
 
     .active-section-link{
-        text-decoration: underline;
-        text-underline-offset: 2.1vw;
-        text-decoration-thickness: 0.4vw;
+        border-bottom: 0.5vw solid var(--dgreen);
+        padding-bottom: 2.1vw;
     }
 
     .about-left{
@@ -384,19 +387,15 @@ input[type="number"] {
     .jemma-nav-link:hover{
         cursor: pointer;
         opacity: 1;
-        text-decoration: underline;
-        text-underline-offset: 2.1vw;
-        text-decoration-thickness: 0.4vw;
-        color: var(--green);
+        border-bottom: 0.5vw solid var(--dgreen);
+        padding-bottom: 2.1vw;
     }
 
     .team-nav-link:hover{
         cursor: pointer;
         opacity: 1;
-        text-decoration: underline;
-        text-underline-offset: 2.1vw;
-        text-decoration-thickness: 0.4vw;
-        color: var(--green);
+        border-bottom: 0.5vw solid var(--dgreen);
+        padding-bottom: 2.1vw;
     }
 
     .jemma-nav-link{
@@ -446,9 +445,9 @@ input[type="number"] {
 
     .estimate-result h3{
         font-weight: 400;
-        padding: 1vw 0;
+        padding: 1.2vw 0.5vw;
         font-size: 2.1vw;
-        color: var(--dgreen);
+        color: var(--green);
     }
 
     .estimate-result{
@@ -464,7 +463,7 @@ input[type="number"] {
     .contact-section{
         display: grid;
         grid-template-columns:1fr 2fr;
-        padding: 6vw 3vw;
+        padding: 6vw 3vw 8vw 3vw;
         gap: 6vw;
         background-color: var(--forest);
         color: var(--natural);
@@ -477,7 +476,7 @@ input[type="number"] {
     }
 
     .contact-right .form-segment input{
-        width: 47vw;
+        width: 100%;
         border-radius: 0;
     }
 
@@ -485,7 +484,7 @@ input[type="number"] {
     .faq-section{
         display: grid;
         grid-template-columns:2fr 1fr;
-        padding: 6vw 3vw;
+        padding: 6vw 3vw 8vw 3vw;
         gap: 6vw;
         background-color: var(--natural);
     }
@@ -509,7 +508,7 @@ input[type="number"] {
     
 /* Footer section */
     footer{
-        padding: 6vw 3vw;
+        padding: 8vw 3vw 6vw 3vw;
         display: grid;
         grid-template-columns:2fr 1fr;
         /* border-top: 0.1vw solid var(--green); */
@@ -556,13 +555,13 @@ input[type="number"] {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: -0.05vw 0;
+        margin: -0.075vw 0;
         padding: 2vw 0;
     }
 
     .makeForest .accordion-item{
-        border-top: solid 0.1vw var(--forest);
-        border-bottom: solid 0.1vw var(--forest);
+        border-top: solid 0.15vw var(--forest);
+        border-bottom: solid 0.15vw var(--forest);
     }
 
 
@@ -625,24 +624,23 @@ input[type="number"] {
     }
 
     input{
-        background-color:  var(--natural);
-        border: solid 0.1vw var(--forest);
-        font-size: 1.3vw;
+        background-color: var(--forest);
+        border: none;
+        border-bottom: solid 0.1vw var(--dgreen);
         font-weight: 400;
-        padding: 0.3vw 0.5vw;
+        padding: 1.2vw 0.5vw;
         border-radius: 0;
-        color: var(--forest);
+        color: var(--green);
+        font-size: 2.1vw;
+    }
+    input::placeholder{
+        color: var(--green);
+        font-size: 2.1vw;
+        border: none;
     }
         input:focus {
             outline: none;
-        }
-        .contact-right input{
-            background-color: var(--natural);
-            font-size: 1.3vw;
-            font-weight: 400;
-            border-radius: 0;
-            color: var(--forest);
-        }
+        }        
 
     .button-segment{
         display: flex;
@@ -674,7 +672,7 @@ input[type="number"] {
     }
 
     .contact-section label {
-        font-size: 1.3vw;
+        font-size: 2.1vw;
         font-weight: 400;
         margin: 0;
         padding: 0;
@@ -684,15 +682,18 @@ input[type="number"] {
     .radio-button{
         display: flex;
         align-items: center;
-        justify-content: space-between;
         gap: 2vw;
         margin-top: 0.5vw;
+        border-bottom: var(--dgreen) solid .1vw;
+        padding: 1.2vw 0;
     }
         .button-container{
             display: flex;
             flex-direction: row;
-            width: 47vw;
+            justify-content: start;
             gap: 1.5vw;
+            
+
         }
 
     input[type="radio"],
@@ -700,48 +701,46 @@ input[type="number"] {
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
-        width: 1vw;
-        height: 1vw;
-        border: solid 0.09vw var(--natural);
+        width: 1.2vw;
+        height: 1.2vw;
+        border: solid 0.1vw var(--dgreen);
         border-radius: 50%;
         background-color: var(--forest);
     }
         input[type="radio"]:checked,
         input[type="checkbox"]:checked {
-            background-color: var(--natural) 
+            background-color: var(--dgreen) 
         }
 
     .radio-label{
-        font-size: 1.3vw ;
-        color: var(--natural);
+        font-size: 2.1vw;
+        color: var(--dgreen);
         font-weight: 400;
-        opacity: 0.5;
     }
 
     textarea{
-        width: 47vw;
-        background-color: var(--natural);
+        width: 100%;
         border: none;
-        font-size: 1.3vw;
-        font-weight: 400;
-        padding: 0.3vw 0.5vw;
         resize: vertical; 
-        max-width: 47vw;
-        margin-top: 0.3vw;
+        max-width: 100%;
         border-radius: 0;
-        border: solid 0.1vw var(--forest);
-        color: var(--forest);
+        
+        background-color: var(--forest);
+        border: none;
+        border-bottom: solid 0.1vw var(--dgreen);
+        font-weight: 400;
+        padding: 1.2vw 0;
+        border-radius: 0;
+        color: var(--green);
+        font-size: 2.1vw;
+    }
+    textarea::placeholder{
+        color: var(--green);
+        font-size: 2.1vw;
+        border: none;
     }
         textarea:focus{
             outline: none;
-        }
-        .textarea{
-            display: flex;
-            font-size: 1.6vw;
-            align-items: start;
-            justify-content: space-between;
-            gap: 2vw;
-            margin-top: 0.5vw;
         }
 
     .error{
@@ -801,6 +800,18 @@ input[type="number"] {
 /* responsive styles */
   @media screen and (max-width: 1000px){
 
+    .radio-button{
+        border-bottom: var(--dgreen) solid 1px;
+    }
+
+    .dot{
+        padding-left: 3px;
+      }
+
+    .hero-text::before {
+        border-top: 5px solid var(--dgreen) ;
+      }
+
 
     #split-text {
         width: 350px;
@@ -838,17 +849,26 @@ input[type="number"] {
     }
 
     .radio-label{
-        font-size: 13px
+        font-size: 21px
       }
 
       .contact-section label {
-        font-size: 13px;
+        font-size: 21px;
     }
     
+
     input{
-        font-size: 13px;
-        padding: 3px 5px;
-        border: solid 1px var(--forest);
+        padding: 12px 5px;
+        font-size: 21px;
+        border-bottom: solid 1px var(--dgreen);
+    }
+    input::placeholder{
+        font-size: 21px;
+        border: none;
+    }
+
+    .contact-right .form-segment input{
+        font-size: 21px;
     }
 
     input[type="radio"],
@@ -856,15 +876,13 @@ input[type="number"] {
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
-        width: 10px;
-        height: 10px;
-        border: solid 0.9px var(--natural);
+        width: 12px;
+        height: 12px;
+        border: solid 1px var(--dgreen);
         border-radius: 50%;
-        background-color: var(--forest);
     }
-
-    .contact-right .form-segment input{
-        font-size: 13px;
+    .radio-label{
+        font-size: 21px;
     }
     
     .underline{
@@ -891,7 +909,10 @@ input[type="number"] {
     }
 
     .hero-text{
-        font-size: 44px;
+        font-size: 42px;
+        top: 49%;
+        left: 50%;
+        padding-top:  18px;
     }
     
     h2{
@@ -940,9 +961,9 @@ input[type="number"] {
     
 
     .makeForest .accordion-item{
-        border-top: solid 1px var(--forest);
-        border-bottom: solid 1px var(--forest);
-        margin: -0.5px 0;
+        border-top: solid 1.5px var(--forest);
+        border-bottom: solid 1.5px var(--forest);
+        margin: -0.75px 0;
         padding: 20px 0;
     }
 
@@ -971,20 +992,18 @@ input[type="number"] {
         flex-direction: row;
         gap: 60px;
         border-bottom: solid 1px;
-        padding-bottom: 20px;
     }
 
     .active-section-link{
-        text-underline-offset: 21px;
-        text-decoration-thickness: 4px;
+        border-bottom: 5px solid var(--dgreen);
+        padding-bottom: 21px;
     }
-
     
     .about-left{
         gap: 3vw;
     }
     
-    .jemma-nav-link:hover{
+    /* .jemma-nav-link:hover{
         text-underline-offset: 21px;
         text-decoration-thickness: 4px;
     }
@@ -992,8 +1011,18 @@ input[type="number"] {
     .team-nav-link:hover{
         text-underline-offset: 21px;
         text-decoration-thickness: 4px;
-    }
+    } */
     
+    .jemma-nav-link:hover{
+        border-bottom: 5px solid var(--dgreen);
+        padding-bottom: 21px;
+    }
+
+    .team-nav-link:hover{
+        border-bottom: 5px solid var(--dgreen);
+        padding-bottom: 21px;
+    }
+
     .estimate-result{
         border-bottom: solid 1px var(--dgreen);
     }
@@ -1011,21 +1040,27 @@ input[type="number"] {
     }
 
     textarea{
-        font-size: 13px;
-        padding: 3px 5px;
-        margin-top: 2px;
-        border: solid 1px var(--forest);
+        border-bottom: solid 1px var(--dgreen);
+        font-weight: 400;
+        padding: 12px 0;
+        font-size: 21px;
+    }
+    textarea::placeholder{
+        font-size: 21px;
+        border: none;
     }
 
   }
 
   @media screen and (max-width: 825px){
+
+    
     label {
-        font-size: 17px;
+        font-size: 21px;
     }
 
     .radio-label{
-        font-size: 13px;
+        font-size: 21px;
       }
 
     .faq-section{
@@ -1064,7 +1099,7 @@ input[type="number"] {
     
   }
 
-  @media screen and (max-width: 750px){
+  @media screen and (max-width: 800px){
 
     #split-text {
         width: 275px;
@@ -1107,16 +1142,16 @@ input[type="number"] {
     }
 
     .contact-right .form-segment input{
-        width: 74vw;
+        width: 100%;
     }
 
     textarea{
-        width: 74vw;
-        max-width: 74vw;
+        width: 100%;
+        max-width: 100%;
       }
 
       .button-container{
-        width: 74vw;
+        width: 100%;
     }
     
     .cost-calculator{
@@ -1150,7 +1185,7 @@ input[type="number"] {
     }
 
     .contact-section label{
-        font-size: 13px;
+        font-size: 21px;
         font-weight: 400;
     }
 
@@ -1204,7 +1239,7 @@ input[type="number"] {
 
   }
 
-  @media screen and (max-width: 525px){
+  @media screen and (max-width: 560px){
     .landing-section{
         grid-template-columns:1fr;
         border-bottom: 1px solid var(--dgreen);
@@ -1234,16 +1269,18 @@ input[type="number"] {
         padding: 16vw 3vw 8vw 3vw;
     }
     .contact-right .form-segment input{
-        width: 70vw;
+        width: 100%;
     }
 
     textarea{
-        width: 70vw;
-        max-width: 70vw;
+        width: 100%;
+        max-width: 100%;
       }
 
       .button-container{
-        width: 70vw;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     #split-text {
@@ -1288,16 +1325,20 @@ input[type="number"] {
     }
     
     
-    .active-section-link{
+    /* .active-section-link{
         text-underline-offset: 16px;
         text-decoration-thickness: 4px;
+    } */
+    .active-section-link{
+        border-bottom: 5px solid var(--dgreen);
+        padding-bottom: 21px;
     }
     
     .about-left{
         gap: 3vw;
     }
     
-    .jemma-nav-link:hover{
+    /* .jemma-nav-link:hover{
         text-underline-offset: 16px;
         text-decoration-thickness: 4px;
     }
@@ -1305,13 +1346,22 @@ input[type="number"] {
     .team-nav-link:hover{
         text-underline-offset: 16px;
         text-decoration-thickness: 4px;
+    } */
+    .jemma-nav-link:hover{
+        border-bottom: 5px solid var(--dgreen);
+        padding-bottom: 21px;
+    }
+
+    .team-nav-link:hover{
+        border-bottom: 5px solid var(--dgreen);
+        padding-bottom: 21px;
     }
 
     #contactForm .form-segment{
         display: flex;
         flex-direction: column;
         align-items: start;
-        justify-content: space-between;
+        justify-content: start;
         gap: 2vw;
     }
 
@@ -1331,8 +1381,8 @@ input[type="number"] {
         display: flex;
         flex-direction: column;
         align-items: start;
-        justify-content: space-between;
-        gap: 3vw;
+        justify-content: start;
+        gap: 30px;
     }
 
     .button-container{
