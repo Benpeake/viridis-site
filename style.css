@@ -695,7 +695,7 @@ footer {
   text-decoration-thickness: 0.1vw;
 }
 .underline:hover {
-  color: var(--dgreen);
+  color: var(--green);
 }
 
 @media screen and (max-width: 1000px) {
