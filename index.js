@@ -118,10 +118,6 @@ const mobileSlideShowImages = [
 let currentImageIndex = 0;
 const slideImage = document.querySelector(".slide-image");
 
-// function showImage(index, imagesArray) {
-//   slideImage.src = imagesArray[index];
-// }
-
 let firstLoad = true;
 
 function showImage(index, imagesArray) {
@@ -162,9 +158,6 @@ rightBtn.addEventListener("click", function () {
 
 // Initial update based on screen width
 updateSlideShow();
-
-// Update on window resize
-window.addEventListener("resize", updateSlideShow);
 
 // Accordion logic
 const accordionItems = document.querySelectorAll(".accordion-section");
@@ -471,7 +464,7 @@ const rightButton = document.getElementById("rightButton");
 
 const gallery = horizontalLoop(items, {
   paused: true, 
-  gap: 90,
+  paddingRight: 60
 });
 
 leftButton.addEventListener("click", () => {
@@ -536,13 +529,12 @@ function horizontalLoop(items, config) {
   });
   gsap.set(items, { x: 0 });
   totalWidth =
-  items[length - 1].offsetLeft +
-  (xPercents[length - 1] / 100) * widths[length - 1] -
-  startX +
-  items[length - 1].offsetWidth *
-    gsap.getProperty(items[length - 1], "scaleX") +
-  (parseFloat(config.paddingRight) || 0) +
-  (parseFloat(config.gap) || 0); // Add the gap between slides
+    items[length - 1].offsetLeft +
+    (xPercents[length - 1] / 100) * widths[length - 1] -
+    startX +
+    items[length - 1].offsetWidth *
+      gsap.getProperty(items[length - 1], "scaleX") +
+    (parseFloat(config.paddingRight) || 0);
   for (i = 0; i < length; i++) {
     item = items[i];
     curX = (xPercents[i] / 100) * widths[i];
@@ -602,3 +594,23 @@ function horizontalLoop(items, config) {
   }
   return tl;
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the nav element
+  const nav = document.querySelector('nav');
+
+  // Add a scroll event listener
+  window.addEventListener('scroll', function () {
+    // Check the scroll position
+    if (window.scrollY > 10) {
+      // Update the padding when the user scrolls
+      nav.style.padding = '1vw 2.1vw';
+      nav.style.borderBottom = 'solid .07vw var(--feta)'
+    } else {
+      // Reset the padding when the user is at the top
+      nav.style.padding = '3.5vw 2.1vw';
+      nav.style.borderBottom = 'solid .07vw var(--forest)'
+    }
+  });
+});

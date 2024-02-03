@@ -98,15 +98,14 @@
       </div>
       <div class="nav-right mobileHide text-appear">
         <p><a class="scroll-link" href="#galleryContainer">Gallery</a></p>
-        <p class="makeGreen">|</p>
+       
         <p><a class="scroll-link" href="#about">About</a></p>
-        <p class="makeGreen">|</p>
+  
         <p><a class="scroll-link" href="#services">Services</a></p>
-        <p class="makeGreen">|</p>
+  
         <p><a class="scroll-link" href="#quote">Quote-Estimate</a></p>
-        <p class="makeGreen">|</p>
+
         <p><a class="scroll-link" href="#faq">FAQ</a></p>
-        <div></div>
         <a class="btn scroll-link" href="#contact">Contact</a>
       </div>
       <!-- mobile-nav -->
@@ -146,7 +145,7 @@
       <section class="intro green">
         <h1 class="text-appear">
           Garden design, landscaping, maintenance and planting services in Bath
-          & Bristol.
+          and Bristol.
         </h1>
       </section>
       <section class="slide-gallery text-appear">
@@ -183,7 +182,7 @@
           <div class="accordion-section">
             <div class="accordion-item">
               <div class="accordion-title-container">
-                <p class="light">01</p>
+                <h3 class="light">01</h3>
                 <h3 class="accord-title">Design</h3>
               </div>
               <svg
@@ -221,7 +220,7 @@
           <div class="accordion-section">
             <div class="accordion-item">
               <div class="accordion-title-container">
-                <p class="light">02</p>
+                <h3 class="light">02</h3>
                 <h3 class="accord-title">Build</h3>
               </div>
               <svg
@@ -260,7 +259,7 @@
           <div class="accordion-section">
             <div class="accordion-item">
               <div class="accordion-title-container">
-                <p class="light">03</p>
+                <h3 class="light">03</h3>
                 <h3 class="accord-title">Plant</h3>
               </div>
               <svg
@@ -298,7 +297,7 @@
           <div class="accordion-section">
             <div class="accordion-item">
               <div class="accordion-title-container">
-                <p class="light">04</p>
+                <h3 class="light">04</h3>
                 <h3 class="accord-title">Maintenance</h3>
               </div>
               <svg
@@ -338,63 +337,8 @@
           </div>
         </div>
       </section>
-      <section class="cost-calculator" id="quote">
-        <div class="cost-calculator-left text-appear">
-          <form action="" method="post" class="quote-calc" id="quoteForm">
-            <div class="form-segment">
-              <label for="length">Length m*</label>
-              <input
-                class="calc-input"
-                type="number"
-                id="length"
-                name="length"
-                step="1"
-                required
-              />
-            </div>
-            <div class="form-segment">
-              <label for="width">Width m*</label>
-              <input
-                class="calc-input"
-                type="number"
-                id="width"
-                name="width"
-                step="1"
-                required
-              />
-            </div>
-            <div class="button-segment">
-              <button class="quote-submit" type="submit">Submit</button>
-            </div>
-            <div class="estimate-result">
-              <h3 class="quote-est">
-                Estimate <span id="quote-result"></span>
-              </h3>
-            </div>
-          </form>
-        </div>
-        <div class="cost-calculator-right text-appear">
-          <h2 class="cost-calc-title green paddingBelow">
-            How much does a new garden cost?
-          </h2>
-          <p>
-            At the start of our design process, we will always ask if you have a
-            budget in mind for the work, and more often than not, it&#39;s not
-            something a lot of clients know how to answer.
-            <br /><br />
-            Every garden project is unique, and the costs will vary depending on
-            numerous factors such as access, level of skilled work involved,
-            specific material costs etc. Because of this we will always provide
-            an initial consultation and quote that&#39;s bespoke to your
-            requirements and discuss what is likely to be involved in terms of
-            costs before committing to a full design.
-            <br /><br />
-            As an initial guide to get you started, this calculator will
-            generate an average cost per square meter , just input your garden
-            dimensions to see a ball park figure for your garden project.
-          </p>
-        </div>
-      </section>
+      <div class="line">
+      </div>
       <section class="body-gallery">
         <div class="gallery-window" id="galleryWindow">
           <div class="bg-wrapper">
@@ -427,9 +371,69 @@
           </div>
         </div>
       </section>
-      
+      <div class="line">
+    </div>
+      <section class="cost-calculator" id="quote">
+        <div class="cost-calculator-left text-appear">
+          <form action="" method="post" class="quote-calc" id="quoteForm">
+            <div class="form-segment">
+              <label for="length">length m</label>
+              <input
+                class="calc-input"
+                type="number"
+                id="length"
+                name="length"
+                step="1"
+                required
+              />
+            </div>
+            <div class="form-segment">
+              <label for="width">width m</label>
+              <input
+                class="calc-input"
+                type="number"
+                id="width"
+                name="width"
+                step="1"
+                required
+              />
+            </div>
+            <div class="button-segment">
+              <button class="quote-submit" type="submit">Submit</button>
+            </div>
+            <div class="estimate-result">
+              <h3 class="quote-est">
+                estimate <span id="quote-result"></span>
+              </h3>
+            </div>
+          </form>
+        </div>
+        <div class="cost-calculator-right text-appear">
+          <h2 class="cost-calc-title green paddingBelow">
+            How much does a new garden cost?
+          </h2>
+          <p>
+            At the start of our design process, we will always ask if you have a
+            budget in mind for the work, and more often than not, it&#39;s not
+            something a lot of clients know how to answer.
+            <br /><br />
+            Every garden project is unique, and the costs will vary depending on
+            numerous factors such as access, level of skilled work involved,
+            specific material costs etc. Because of this we will always provide
+            an initial consultation and quote that&#39;s bespoke to your
+            requirements and discuss what is likely to be involved in terms of
+            costs before committing to a full design.
+            <br /><br />
+            As an initial guide to get you started, this calculator will
+            generate an average cost per square meter , just input your garden
+            dimensions to see a ball park figure for your garden project.
+          </p>
+        </div>
+      </section>
+      <div class="line">
+    </div>
       <section class="about-section-container" id="about">
-        <h2 class="text-appear green paddingBelow">Get to know us</h2>
+        <h2 class="text-appear green paddingBelow ">Get to know us</h2>
         <div class="about-section">
           <div class="about-left text-appear">
             <div class="about-nav">
@@ -471,6 +475,8 @@
           </div>
         </div>
       </section>
+      <div class="line">
+    </div>
       <section class="contact-section" id="contact">
         <div class="contact-left text-appear">
           <h2 class="green paddingBelow">Contact</h2>
@@ -527,7 +533,7 @@
               </div>
               <div class="button-container">
                 <label for="garden-size-small">
-                  <span class="radio-label">Small</span>
+                  <span class="radio-label">SMALL</span>
                   <input
                     class="radiodot"
                     type="radio"
@@ -537,7 +543,7 @@
                   />
                 </label>
                 <label for="garden-size-medium">
-                  <span class="radio-label">Medium</span>
+                  <span class="radio-label">MEDIUM</span>
                   <input
                     class="radiodot"
                     type="radio"
@@ -547,7 +553,7 @@
                   />
                 </label>
                 <label for="garden-size-large">
-                  <span class="radio-label">Large</span>
+                  <span class="radio-label">LARGE</span>
                   <input
                     class="radiodot"
                     type="radio"
@@ -564,7 +570,7 @@
               </div>
               <div class="services-required button-container">
                 <label class="services-required-design">
-                  <span class="radio-label">Design</span>
+                  <span class="radio-label">DESIGN</span>
                   <input
                     type="checkbox"
                     id="services-required-design"
@@ -573,7 +579,7 @@
                   />
                 </label>
                 <label class="services-required-planting">
-                  <span class="radio-label">Planting</span>
+                  <span class="radio-label">PLANT</span>
                   <input
                     type="checkbox"
                     id="services-required-planting"
@@ -582,7 +588,7 @@
                   />
                 </label>
                 <label class="services-required-build">
-                  <span class="radio-label">Build</span>
+                  <span class="radio-label">BUILD</span>
                   <input
                     type="checkbox"
                     id="services-required-build"
@@ -591,7 +597,7 @@
                   />
                 </label>
                 <label class="services-required-maintain">
-                  <span class="radio-label">Maintain</span>
+                  <span class="radio-label">MAINTENANCE</span>
                   <input
                     type="checkbox"
                     id="services-required-maintain"
@@ -623,7 +629,7 @@
           <div class="accordion-section">
             <div class="accordion-item">
               <div class="accordion-title-container">
-                <p class="light-dark">01</p>
+                <h3 class="light-dark">01</h3>
                 <h3 class="accord-title">What size projects do you take on?</h3>
               </div>
               <svg
@@ -651,7 +657,7 @@
           <div class="accordion-section">
             <div class="accordion-item">
               <div class="accordion-title-container">
-                <p class="light-dark">02</p>
+                <h3 class="light-dark">02</h3>
                 <h3 class="accord-title">How much is a garden design?</h3>
               </div>
               <svg
@@ -688,7 +694,7 @@
           <div class="accordion-section">
             <div class="accordion-item">
               <div class="accordion-title-container">
-                <p class="light-dark">03</p>
+                <h3 class="light-dark">03</h3>
                 <h3 class="accord-title">How many weeks?</h3>
               </div>
               <svg
