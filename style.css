@@ -25,6 +25,7 @@ input[type="number"] {
   --forest: #121811;
   --green: #beef9e;
   --feta: #e8f9dc;
+  --moss: #818D7A
 }
 
 .text-appear {
@@ -72,24 +73,24 @@ a {
 }
 
 p {
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   font-weight: 300;
   line-height: 1.5;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 h1 {
-  font-size: 3.58vw;
+  font-size: 3.17vw;
   font-weight: 400;
 }
 
 h2 {
-  font-size: 3.58vw;
+  font-size: 3.17vw;
   font-weight: 400;
 }
 
 h3 {
-  font-size: 2.07vw;
+  font-size: 2.03vw;
   font-weight: 300;
 }
 
@@ -106,7 +107,7 @@ h3 {
   background-color: var(--forest);
   color: var(--green);
   font-weight: 300;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
 }
 .btn:hover {
   color: var(--feta);
@@ -116,7 +117,7 @@ h3 {
 }
 
 section {
-  padding: 2.8vw 2.1vw;
+  padding: 2.8vw 3vw;
 }
 
 .mobileHide {
@@ -151,10 +152,10 @@ section {
 
 
 .line{
-  width: calc(100% - 4.2vw);
+  width: calc(100% - 6vw);
   height: .07vw;
   background-color: var(--feta);
-  margin: 0 2.1vw;
+  margin: 0 3vw;
   opacity: 0.5;
 }
 /* nav */
@@ -167,11 +168,14 @@ nav {
   top: 0;
   width: 100%;
   z-index: 2;
-  padding: 3.5vw 2.1vw;
+  padding: 4vw 3vw;
   transition: all 0.4s ease;
   border-bottom: .7px solid var(--forest);
 }
 
+nav p{
+  opacity: 1;
+}
 .nav-right {
   display: flex;
   gap: 3vw;
@@ -313,7 +317,7 @@ padding-bottom: 0;
 .services-section {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 9vw;
+  gap: 7vw;
   padding: 7vw 9vw 10.5vw 9vw;
 }
 
@@ -345,6 +349,7 @@ padding-bottom: 0;
 .accordion-item {
   border-top: solid .7px var(--green);
   border-bottom: solid .7px var(--green);
+  color: var(--green);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -410,7 +415,7 @@ padding-bottom: 0;
 .cost-calculator {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 9vw;
+  gap: 7vw;
   padding: 7vw 9vw 10.5vw 9vw;
 }
 
@@ -438,7 +443,7 @@ padding-bottom: 0;
 .estimate-result {
   font-weight: 300;
   padding: 1vw 0.5vw;
-  font-size: 2.07vw;
+  font-size: 1.63vw;
   color: var(--green);
 }
 
@@ -446,14 +451,14 @@ padding-bottom: 0;
   color: var(--green);
   font-weight: 300;
   padding-left: 1vw;
-  font-size: 2.07vw;
+  font-size: 1.63vw;
   opacity: 1;
 }
 
 .quote-est {
-  color: var(--feta);
+  color: var(--green);
   font-weight: 300;
-  font-size: 2.07vw
+  font-size: 1.63vw
 }
 
 .estimate-result {
@@ -487,7 +492,7 @@ input {
   padding: 1vw 0.5vw;
   border-radius: 0;
   color: var(--green);
-  font-size: 2.07vw;
+  font-size: 1.63vw;
 }
 .calc-input {
   width: 12vw;
@@ -495,7 +500,7 @@ input {
 
 input::placeholder {
   color: var(--green);
-  font-size: 2.07vw;
+  font-size: 1.63vw;
   border: none;
   opacity: 1 !important;
 }
@@ -509,31 +514,33 @@ input:focus {
 }
 
 button {
-  border: 0.1vw solid var(--feta);
+  border: 0.1vw solid var(--green);
   border-radius: 3.2vw;
   padding: 0.75vw 1.25vw;
   background-color: var(--forest);
-  color: var(--feta);
+  color: var(--green);
   font-weight: 300;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   margin-top: 1vw;
 }
 button:hover {
   background-color: var(--forest);
-  color: var(--green);
-  border: 0.1vw solid var(--green);
+  color: var(--feta);
+  border: 0.1vw solid var(--feta);
   cursor: pointer;
+  font-weight: 300;
 }
 
 label {
-  font-size: 2.07vw;
+  font-size: 1.63vw;
   font-weight: 300;
   margin: 0;
   padding: 0;
+  color: var(--green);
 }
 
 .contact-section label {
-  font-size: 2.07vw;
+  font-size: 1.63vw;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -572,7 +579,7 @@ input[type="checkbox"]:checked {
 }
 
 .radio-label {
-  font-size: 1.2vw;
+  font-size: 1.63vw;
   color: var(--green);
   font-weight: 300;
 }
@@ -590,11 +597,11 @@ textarea {
   padding: 1vw 0.5vw;
   border-radius: 0;
   color: var(--green);
-  font-size: 2.07vw;
+  font-size: 1.63vw;
 }
 textarea::placeholder {
   color: var(--green);
-  font-size: 2.07vw;
+  font-size: 1.63vw;
   border: none;
 }
 textarea:focus {
@@ -605,7 +612,7 @@ textarea:focus {
 .about-section {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 9vw;
+  gap: 7vw;
 }
 
 .about-section-container {
@@ -627,12 +634,16 @@ textarea:focus {
   flex-direction: row;
   gap: 6vw;
   border-bottom: solid .7px var(--green);
-  color: var(--feta);
+  color: var(--green);
+}
+
+.about-nav p{
+  font-size: 1.63vw;
 }
 
 .active-section-link {
   border-bottom: 0.28vw solid var(--green);
-  padding-bottom: 2.1vw;
+  padding-bottom: 1.5vw;
 }
 
 .about-left {
@@ -645,14 +656,14 @@ textarea:focus {
   cursor: pointer;
   opacity: 1;
   border-bottom: 0.28vw solid var(--green);
-  padding-bottom: 2.1vw;
+  padding-bottom: 1.5vw;
 }
 
 .team-nav-link:hover {
   cursor: pointer;
   opacity: 1;
   border-bottom: 0.28vw solid var(--green);
-  padding-bottom: 2.1vw;
+  padding-bottom: 1.5vw;
 }
 
 .jemma-nav-link {
@@ -664,7 +675,7 @@ textarea:focus {
 }
 
 .active-section-link {
-  color: var(--feta);
+  color: var(--green);
   opacity: 1;
 }
 
@@ -673,7 +684,7 @@ textarea:focus {
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 7vw 9vw 10.5vw 9vw ;
-  gap: 9vw;
+  gap: 7vw;
 }
 
 .contact-right {
@@ -700,13 +711,7 @@ textarea:focus {
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding: 7vw 9vw 10.5vw 9vw;
-  gap: 9vw;
-  background-color: var(--feta);
-  color: var(--forest);
-}
-
-.accord-dark {
-  color: var(--forest);
+  gap: 7vw;
 }
 
 .faq-title {
@@ -724,9 +729,10 @@ textarea:focus {
 
 /* Footer section */
 footer {
-  padding: 5.6vw 2.1vw;
+  padding: 5.6vw 3vw;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  border-top: solid .07vw var(--feta);
 }
 
 .social-icons {
@@ -821,10 +827,15 @@ footer {
 
 @media screen and (max-width: 1000px) {
 
+  .about-nav p{
+    font-size: 16.3px;
+  }
+  
+
   .line{
     width: calc(100% - 42px);
     height: .7px;
-    margin: 0 21px;
+    margin: 0 30px;
   }
 
   .slide-gallery {
@@ -847,7 +858,7 @@ footer {
 
 
   .quote-est {
-    font-size: 20.7px;
+    font-size: 16.3px;
   }
 
   .underline {
@@ -864,22 +875,22 @@ footer {
   }
 
   p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .btn {
     border: 1px solid var(--green);
     border-radius: 32px;
     padding: 7.5px 12.5px;
-    font-size: 12px;
+    font-size: 13px;
   }
   .btn:hover {
     border: 1px solid var(--feta);
   }
 
   nav {
-    padding: 28px 21px;
-    border-width: 7px;
+    padding: 28px 30px;
+    border-width: .7px;
   }
 
   .nav-right {
@@ -887,7 +898,7 @@ footer {
   }
 
   h1 {
-    font-size: 35.8px;
+    font-size: 31.7px;
   }
 
   .logo {
@@ -915,7 +926,7 @@ footer {
   }
 
   .services-section {
-    gap: 90px;
+    gap: 70px;
     padding: 35px 60px 105px 60px;
   }
 
@@ -971,19 +982,19 @@ footer {
   }
 
   h3 {
-    font-size: 20.7px;
+    font-size: 20.3px;
   }
 
   h2 {
-    font-size: 35.8px;
+    font-size: 31.7px;
   }
 
   section {
-    padding: 28px 21px;
+    padding: 28px 30px;
   }
 
   .cost-calculator {
-    gap: 90px;
+    gap: 70px;
     padding: 70px 60px 105px 60px;
   }
 
@@ -993,13 +1004,13 @@ footer {
 
   .estimate-result {
     padding: 10px 5px;
-    font-size: 20.7px;
+    font-size: 16.3px;
     border-bottom: solid .7px var(--green);
   }
 
   #quote-result {
     padding-left: 10px;
-    font-size: 20.7px;
+    font-size: 16.3px;
   }
   .calc-input {
     width: 120px;
@@ -1017,10 +1028,10 @@ footer {
 
   input {
     padding: 10px 5px;
-    font-size: 20.7px;
+    font-size: 16.3px;
   }
   input::placeholder {
-    font-size: 20.7px;
+    font-size: 16.3px;
     border: none;
   }
 
@@ -1028,7 +1039,7 @@ footer {
     border: 1px solid var(--feta);
     border-radius: 32px;
     padding: 7.5px 12.5px;
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 10px;
   }
   button:hover {
@@ -1036,11 +1047,11 @@ footer {
   }
 
   label {
-    font-size: 20.7px;
+    font-size: 16.3px;
   }
 
   .contact-section label {
-    font-size: 20.7px;
+    font-size: 20.3px;
   }
 
   .radio-button {
@@ -1055,26 +1066,26 @@ footer {
 
   input[type="radio"],
   input[type="checkbox"] {
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
     border: solid 1px var(--green);
   }
 
   .radio-label {
-    font-size: 20.7px;
+    font-size: 20.3px;
   }
 
   textarea {
     border-bottom: solid .7px var(--green);
     padding: 10px 5px;
-    font-size: 20.7px;
+    font-size: 16.3px;
   }
   textarea::placeholder {
-    font-size: 20.7px;
+    font-size: 16.3px;
   }
 
   .about-section {
-    gap: 90px;
+    gap: 70px;
   }
 
   .about-section-container {
@@ -1093,7 +1104,7 @@ footer {
 
   .active-section-link {
     border-bottom: 5px solid var(--green);
-    padding-bottom: 21px;
+    padding-bottom: 15px;
   }
 
   .about-left {
@@ -1102,22 +1113,22 @@ footer {
 
   .jemma-nav-link:hover {
     border-bottom: 5px solid var(--green);
-    padding-bottom: 21px;
+    padding-bottom: 15px;
   }
 
   .team-nav-link:hover {
     border-bottom: 5px solid var(--green);
-    padding-bottom: 21px;
+    padding-bottom: 15px;
   }
 
   .contact-section {
     padding: 70px 60px 105px 60px ;
-    gap: 90px;
+    gap: 70px;
   }
 
   .faq-section {
     padding: 70px 60px 105px 60px;
-    gap: 90px;
+    gap: 70px;
   }
 
   .faq-accord {
@@ -1135,7 +1146,8 @@ footer {
   }
 
   footer {
-    padding: 56px 21px;
+    padding: 56px 30px;
+    border-top: solid .7px var(--feta);
   }
 
   .social-icons {

@@ -605,11 +605,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check the scroll position
     if (window.scrollY > 10) {
       // Update the padding when the user scrolls
-      nav.style.padding = '1vw 2.1vw';
+      nav.style.padding = '1.5vw 3vw';
       nav.style.borderBottom = 'solid .07vw var(--feta)'
     } else {
       // Reset the padding when the user is at the top
-      nav.style.padding = '3.5vw 2.1vw';
+      nav.style.padding = '4vw 3vw';
       nav.style.borderBottom = 'solid .07vw var(--forest)'
     }
   });
