@@ -616,12 +616,22 @@ label {
   padding-right: clamp(60px, 6vw, 96px);
 }
 
-.about-section img {
+.about-right{
+  position: relative;
+  border-radius: clamp(9px, .9vw, 14.4px);
+  margin-top: clamp(-5px, .5vw, -80px);
   width: 100%;
-  height: auto;
+  height: fit-content;
+  position: relative;
+}
+
+.about-section img {
   display: block;
   object-fit: cover;
   border-radius: clamp(9px, .9vw, 14.4px);
+  width: 100%; 
+  height: auto; 
+  position: relative;
 }
 
 .about-nav {
