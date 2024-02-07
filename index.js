@@ -350,6 +350,7 @@ const accordionImages = [
   "images/design.jpg",
   "images/build.jpg",
   "images/maintain.jpg",
+  "images/team.jpg",
 ]
 preloadImages(accordionImages);
 
