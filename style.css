@@ -498,9 +498,25 @@ nav a:hover {
   gap: clamp(30px, 3vw, 48px);
 }
 
+.form-2section{
+  display: flex;
+  gap: 3vw;
+  width: 100%;
+}
+
+.form-segment-2section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(10px, 1vw, 16px);
+  border-bottom: solid var(--green) 1px;
+  padding-left: 5px;
+  width: 100%;
+}
+
 .quote-lengths-container{
   display: flex;
-  gap: clamp(60px, 6vw, 96px);
+  gap: clamp(30px, 3vw, 64px);
 }
 
 .calculator-title{
@@ -823,6 +839,12 @@ footer {
 }
 
 @media screen and (max-width: 750px) {
+
+
+  .form-2section{
+    display: flex;
+    flex-direction: column;
+  }
 
   .intro {
     grid-template-columns: 1fr;
