@@ -201,6 +201,17 @@ const mobileSlideShowImages = [
   "images/viridis-slide-3-mobile.jpg",
 ];
 
+function preloadImages(imageArray) {
+  for (let i = 0; i < imageArray.length; i++) {
+    const img = new Image();
+    img.src = imageArray[i];
+  }
+}
+
+// Preload images for both desktop and mobile
+preloadImages(slideShowImages);
+preloadImages(mobileSlideShowImages);
+
 let currentImageIndex = 0;
 const slideImage = document.querySelector(".slide-image");
 
@@ -333,6 +344,14 @@ function fadeImage(src, count) {
     },
   });
 }
+
+const accordionImages = [
+  "images/planting.jpg",
+  "images/design.jpg",
+  "images/build.jpg",
+  "images/maintain.jpg",
+]
+preloadImages(accordionImages);
 
 // Event listeners with fade effect
 accordionIcon_1.addEventListener("click", () => {
