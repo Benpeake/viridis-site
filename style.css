@@ -53,8 +53,7 @@ h2,
 h3,
 h4,
 p,
-ul,
-li {
+ul{
   margin: 0;
   padding: 0;
 }
@@ -117,10 +116,14 @@ h4 {
 
 .btn-container,
 .nav-right,
-p {
+p,
+li {
   font-size: clamp(13px, 1.3vw, 20.8px);
   font-weight: 300;
   line-height: 1.5;
+}
+li {
+  display: list-item;
 }
 
 a {
@@ -795,6 +798,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: clamp(12px, 1.2vw, 19.2px);
 }
 
 .footer-mid{
@@ -822,6 +826,18 @@ footer {
   gap: clamp(90px, 9vw, 144px);
 }
 
+.privacy-policy-section{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: clamp(60px, 6vw, 96px) clamp(30px, 18vw, 288px);
+  gap: clamp(15px, 1.5vw, 24px);
+}
+
+.bullet{
+  padding-left: clamp(30px, 3vw, 48px);
+}
+
 @media screen and (max-width: 1000px) {
 
   .radio-button {
@@ -840,7 +856,13 @@ footer {
 
 @media screen and (max-width: 750px) {
 
-
+  .privacy-policy-section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: clamp(60px, 6vw, 96px) 0;
+    gap: clamp(15px, 1.5vw, 24px);
+  }
   .form-2section{
     display: flex;
     flex-direction: column;

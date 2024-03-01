@@ -113,7 +113,6 @@ tlModelApear.fromTo(
     ease: "power.out(3)",
   }
 );
-
 //LOGO ANIMATION
 window.addEventListener("DOMContentLoaded", () => {
   function logoAnimation() {
@@ -693,3 +692,6 @@ function smoothScroll(e) {
 scrollLinks.forEach((link) => {
   link.addEventListener("click", smoothScroll);
 });
+
+//LINE appear on scroll
+
